@@ -72,8 +72,6 @@ Do not use horizontal rules as section separators.
 
 Use bold sparingly and only when a term or phrase must stand out on a skim. Do not bold entire sentences or use bold as a substitute for a heading.
 
-Italics are prohibited unless explicitly requested.
-
 Titles and headings must follow APA title case: capitalize the first word, the last word, and all major words. Do not capitalize minor words (and, but, or, nor, for, so, yet, a, an, the, in, on, at, to, by, of, with, from) unless they are the first or last word.
 
 Use bullet points only for sets of independent, parallel items. Do not convert explanatory or sequential prose into bullet lists. Lists are allowed only when they improve clarity; overuse is prohibited.
@@ -123,3 +121,11 @@ Violation: the user asks to fix a phrase on line 12, and the agent rewrites line
 Every claim must be supportable. Do not state something as fact unless it is established knowledge or explicitly sourced. When uncertain, say so.
 
 Do not invent citations, statistics, quotes, or attributions. If the agent cannot verify a claim, it must either omit it or flag it as unverified for the user to confirm.
+
+## Kata Exceptions
+
+Files in `katas/` are exempt from the following rules:
+
+- Bold full sentences are allowed.
+- Numbers may be written as words.
+- Parallel structure in bullet lists is not required.
