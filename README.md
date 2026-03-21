@@ -1,6 +1,14 @@
 # Leadership Micro Katas
 
-Short behavioral drills for software engineers in leadership roles. Each kata targets one untrained default, takes under 15 minutes, and attaches to engineering work already happening: architecture decisions, code reviews, refinements, incident response.
+Software engineers who move into leadership roles lose the feedback loops that made them good. Code compiles or it doesn't. Tests pass or they fail. Whether you just answered a question someone needed to work through themselves produces no signal. Neither does staying silent when you saw a risk nobody named.
+
+Without practice, the defaults win. You code when you should delegate. You answer when you should ask. You avoid the hard conversation because the cost is immediate and the silence feels free.
+
+The gap is not unique to leadership. Dave Thomas created Code Kata because programmers perform but rarely practice. Ted Neward created Architectural Katas because design judgment needs the same kind of repetition. Both showed that practicing a single behavior, in a focused setting, builds skill faster than knowledge alone.
+
+Leadership Micro Katas apply the same principle to the transition from individual contributor to tech lead. Each one targets a single untrained behavior, takes under 15 minutes, and fits inside a review, decision, or conversation already happening.
+
+For more details on the approach, see [Foundations](docs/foundations.md).
 
 ## Katas
 
@@ -34,6 +42,8 @@ Then pick another.
 │   ├── commit-msg                  # Validates commit subject line
 │   └── pre-commit                  # Validates branch name
 ├── katas/                          # Katas
+├── docs/
+│   └── foundations.md              # Background on the kata format
 ├── rules/
 │   ├── git.md                      # Branching, commits, history, destructive git ops
 │   └── writing.md                  # Grammar, tone, structure, formatting
