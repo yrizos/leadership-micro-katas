@@ -15,7 +15,13 @@ Short behavioral drills for software engineers in leadership roles. Each kata ta
 | 007 | [The Line Before the Pressure](katas/007-line-before-pressure.md)     |
 | 008 | [The Thing You Did Not Say](katas/008-thing-you-did-not-say.md)       |
 
-Pick one. Practice it for a week. At the end of the week, reflect: did the moment arise? Did you catch it? What happened? Then pick another.
+Pick one. Practice it for a week. At the end of the week, write down 3 things:
+
+- Did the moment arise?
+- What did you do?
+- What would you change?
+
+Then pick another.
 
 ## Structure
 
