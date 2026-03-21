@@ -46,7 +46,7 @@ esac
 # Obvious prohibited one-word vague subjects (rules/git.md Prohibited commit content)
 subject="${first_line#*: }"
 subject_lc=$(printf '%s' "$subject" | tr '[:upper:]' '[:lower:]')
-for bad in update cleanup 'fix stuff' 'quick fix'; do
+for bad in update updates cleanup fixes changes improvements stuff misc wip tweaks 'fix stuff' 'quick fix' 'minor fix' 'small fix' 'various fixes' 'minor changes'; do
   if [ "$subject_lc" = "$bad" ]; then
     echo "commit-msg: subject is too vague: \"$subject\" (rules/git.md)" >&2
     exit 1
