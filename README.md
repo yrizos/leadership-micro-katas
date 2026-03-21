@@ -29,7 +29,6 @@ Pick one. Practice it for a week. At the end of the week, reflect: did the momen
 │   └── pre-commit                  # Validates branch name
 ├── katas/                          # Katas
 ├── rules/
-│   ├── code.md                     # Error handling, naming, complexity, boundaries
 │   ├── git.md                      # Branching, commits, history, destructive git ops
 │   └── writing.md                  # Grammar, tone, structure, formatting
 ├── .editorconfig

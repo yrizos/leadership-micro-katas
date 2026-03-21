@@ -51,7 +51,6 @@ Violation: a structural change adds a new directory, but the agent does not flag
 Each rule file below is mandatory for the activity it covers. The summaries are not sufficient. Read the full file before performing the associated activity.
 
 - `rules/git.md`: Branching, commit messages, history, and destructive Git operations. Read before any Git activity.
-- `rules/code.md`: How agents write and modify code, covering error handling, naming, complexity, validation, comments, and structure. Read before changing or adding source files.
 - `rules/writing.md`: How agents produce prose. Read before writing or revising substantial written content.
 
 ## Extension Rules
