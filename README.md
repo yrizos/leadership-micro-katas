@@ -14,16 +14,16 @@ For more on the approach, see [Foundations](docs/foundations.md).
 
 This is the catalogue. Each kata is self-contained and can be practiced in any order.
 
-| #   | Kata                                                                  |
-| --- | --------------------------------------------------------------------- |
-| 001 | [Assumption Inventory](katas/001-assumption-inventory.md)             |
-| 002 | [Pre-Mortem Minute](katas/002-pre-mortem-minute.md)                   |
-| 003 | [Opinion or Observation](katas/003-opinion-or-observation.md)         |
-| 004 | [The Blocker Brief](katas/004-blocker-brief.md)                       |
-| 005 | [The Tradeoff Statement](katas/005-tradeoff-statement.md)             |
-| 006 | [The Question Before the Answer](katas/006-question-before-answer.md) |
-| 007 | [The Line Before the Pressure](katas/007-line-before-pressure.md)     |
-| 008 | [The Thing You Did Not Say](katas/008-thing-you-did-not-say.md)       |
+| #   | Kata                                                                  | Behavior                                                          |
+| --- | --------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| 001 | [Assumption Inventory](katas/001-assumption-inventory.md)             | Surface hidden assumptions before they become surprises           |
+| 002 | [Pre-Mortem Minute](katas/002-pre-mortem-minute.md)                   | Anticipate failure before momentum silences doubt                 |
+| 003 | [Opinion or Observation](katas/003-opinion-or-observation.md)         | Ground feedback in evidence, not preference                       |
+| 004 | [The Blocker Brief](katas/004-blocker-brief.md)                       | Translate technical constraints into actionable language          |
+| 005 | [The Tradeoff Statement](katas/005-tradeoff-statement.md)             | Articulate what a decision costs, not just what it gains          |
+| 006 | [The Question Before the Answer](katas/006-question-before-answer.md) | Develop others by resisting the urge to solve for them            |
+| 007 | [The Line Before the Pressure](katas/007-line-before-pressure.md)     | Turn escalation from a stress response into a deliberate decision |
+| 008 | [The Thing You Did Not Say](katas/008-thing-you-did-not-say.md)       | Confront avoidance by naming what you held back                   |
 
 Pick one. Any one. Practice it for a week. At the end of the week, write down 3 things:
 
