@@ -35,16 +35,16 @@ Then pick another.
 
 ```
 .
-├── .cursor/
-│   └── rules/
-│       └── agents.mdc              # Cursor rule: forces agents to read AGENTS.md first
 ├── .githooks/
 │   ├── commit-msg                  # Validates commit subject line
 │   └── pre-commit                  # Validates branch name
 ├── katas/                          # Katas
-├── docs/
+│   ├── 001-assumption-inventory.md
+│   ├── 002-pre-mortem-minute.md
+│   └── ...
+├── docs/                           # Documentation
 │   └── foundations.md              # Background on the kata format
-├── rules/
+├── rules/                          # Agent rules
 │   ├── git.md                      # Branching, commits, history, destructive git ops
 │   └── writing.md                  # Grammar, tone, structure, formatting
 ├── .editorconfig
