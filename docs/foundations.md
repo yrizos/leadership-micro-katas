@@ -58,6 +58,8 @@ Kua, P. (2015). _Talking with Tech Leads_. LeanPub.
 
 Lacerenza, C.N., Reyes, D.L., Marlow, S.L., Joseph, D.L., and Salas, E. (2017). Leadership training design, delivery, and implementation: a meta-analysis. _Journal of Applied Psychology_, 102(12), 1686-1718.
 
+Neward, T. Architectural Katas. https://www.architecturalkatas.com.
+
 Nimante, D., Kokare, M., Baranova, S., and Surikova, S. (2025). Transferring results of professional development into practice: a scoping review. _Education Sciences_, 15(1), 95.
 
 Orosz, G. (2023). _The Software Engineer's Guidebook_. Pragmatic Engineer BV.
