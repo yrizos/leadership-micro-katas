@@ -1,12 +1,12 @@
 # Foundations
 
-Leadership behavior can be trained the same way technical skill can: through structured repetition with feedback. This document collects the research behind that claim and explains why these katas are shaped the way they are.
+Leadership behavior can be trained the same way technical skills can: through structured repetition with feedback. This document collects the research behind that claim and explains why these katas are shaped the way they are.
 
 ## Practice Beats Knowledge
 
 Programmers rarely practice. They perform. Every line of code is production work with production consequences. Dave Thomas coined the term Code Kata in 2003 to give programmers something musicians and athletes already had: a small, repeatable exercise with no stakes, designed to build fluency through repetition.
 
-The word _kata_ (Japanese 型 or 形) means a fixed pattern of movements practiced until the response becomes automatic. The movements are not combat. They are rehearsal, stripped of chaos so you can focus on form. Over time, the form becomes available without deliberation.
+The word _kata_ (Japanese 型 or 形) means a fixed pattern of movements practiced until the response becomes automatic. The movements are not combat. They are rehearsals, stripped of chaos so you can focus on form. Over time, the form becomes available without deliberation.
 
 Mike Rother applied the same idea to management in _Toyota Kata_ (2009). Ted Neward created Architectural Katas for software architecture, later popularized by Neal Ford and Mark Richards. Every adaptation preserved the core mechanism: repeated practice of a specific behavior, under simple enough conditions to allow focused attention, builds durable skill more reliably than instruction alone.
 
@@ -30,7 +30,7 @@ The shift from individual contributor to tech lead removes the feedback mechanis
 
 Patrick Kua interviewed more than 35 tech leads for _Talking with Tech Leads_ (2015). The same pattern keeps surfacing: engineers in leadership roles invest disproportionately in technical skills because those are familiar, and systematically underinvest in people and process skills. Not because they lack the capacity, but because the environment does not develop those skills the way it develops technical ones.
 
-Gergely Orosz makes a related point in _The Software Engineer's Guidebook_ (2023): the tech lead role requires strategy and alignment work that individual contribution never teaches you. Risk identification, stakeholder management, timeline negotiation, distributing decisions instead of making them yourself. A common failure mode is assuming that when a decision needs to be made, you should make it. Orosz argues for the opposite.
+Gergely Orosz makes a related point in _The Software Engineer's Guidebook_ (2023): the tech lead role requires strategy and alignment work that individual contribution never teaches you. Risk identification, stakeholder management, timeline negotiation, and distributing decisions instead of making them yourself. A common failure mode is assuming that when a decision needs to be made, you should make it. Orosz argues for the opposite.
 
 Without rapid feedback, engineers in leadership roles default to what worked before. They code when they should delegate. They answer when they should ask. They avoid conflict because the cost of raising it is immediate and visible, while the cost of silence is diffuse and delayed. These are not character flaws. They are untrained responses in an environment that does not correct them.
 
