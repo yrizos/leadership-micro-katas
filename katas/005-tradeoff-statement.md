@@ -1,3 +1,8 @@
+---
+number: 5
+behavior: Articulate what a decision costs, not just what it gains
+---
+
 # The Tradeoff Statement
 
 You make or advocate for a technical decision.

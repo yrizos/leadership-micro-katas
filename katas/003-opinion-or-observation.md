@@ -1,3 +1,8 @@
+---
+number: 3
+behavior: Ground feedback in evidence, not preference
+---
+
 # Opinion or Observation
 
 Your review comment uses "should," "better," or "prefer."

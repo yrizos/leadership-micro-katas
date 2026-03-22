@@ -1,3 +1,8 @@
+---
+number: 6
+behavior: Develop others by resisting the urge to solve for them
+---
+
 # The Question Before the Answer
 
 A teammate brings you a problem you already know how to solve.

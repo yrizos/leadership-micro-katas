@@ -1,3 +1,8 @@
+---
+number: 4
+behavior: Translate technical constraints into actionable language
+---
+
 # The Blocker Brief
 
 You need to communicate a technical constraint to a non-engineer.

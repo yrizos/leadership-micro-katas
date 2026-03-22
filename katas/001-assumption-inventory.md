@@ -1,3 +1,8 @@
+---
+number: 1
+behavior: Surface hidden assumptions before they become surprises
+---
+
 # Assumption Inventory
 
 A ticket lands for refinement.

@@ -1,3 +1,8 @@
+---
+number: 7
+behavior: Turn escalation from a stress response into a deliberate decision
+---
+
 # The Line Before the Pressure
 
 You are uncertain whether to escalate or handle it yourself.

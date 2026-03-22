@@ -1,3 +1,8 @@
+---
+number: 2
+behavior: Anticipate failure before momentum silences doubt
+---
+
 # Pre-Mortem Minute
 
 You are about to commit to a technical approach.
