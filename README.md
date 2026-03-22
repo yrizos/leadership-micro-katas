@@ -37,20 +37,17 @@ Then pick another.
 
 ```
 .
-├── katas/ # Catalogue of katas
+├── katas/                         # Kata catalog
 │ ├── 001-assumption-inventory.md
 │ ├── 002-pre-mortem-minute.md
 │ └── ...
-├── docs/ # Background on the kata format
-│ └── foundations.md
-├── rules/ # Git conventions and writing standards
-│ ├── git.md
-│ └── writing.md
-├── .editorconfig
-├── .gitattributes
-├── .gitignore
-├── AGENTS.md # Entry point; references rule files by activity
+├── docs/                          # Supporting documentation
+│ └── foundations.md               # Design principles behind the format
+├── rules/                         # Standards for agents and human contributors
+│ ├── git.md                       # Branching, commit, and history rules
+│ └── writing.md                   # Prose and formatting standards
+├── AGENTS.md                      # Rules for agents
 ├── LICENSE
-├── Makefile # Project automation
+├── Makefile                       # Project automation
 └── README.md
 ```
