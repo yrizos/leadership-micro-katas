@@ -227,6 +227,10 @@ Squash merges at the pull request level are acceptable as an alternative and do 
 
 Intermediate or incomplete commits must not enter shared history.
 
+## Pull Requests
+
+Agents must not create pull requests on GitHub. This includes using `gh pr create`, the GitHub API, or any other method to open a pull request. The human operator is responsible for creating pull requests.
+
 ## Enforcement
 
 ### Branch Enforcement
