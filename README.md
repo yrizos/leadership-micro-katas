@@ -21,11 +21,12 @@ For the thinking behind the format, see [Rationale](docs/rationale.md).
 | 001 | [Assumption Inventory](katas/001-assumption-inventory.md)             | Surface hidden assumptions before they become surprises           |
 | 002 | [Pre-Mortem Minute](katas/002-pre-mortem-minute.md)                   | Anticipate failure before momentum silences doubt                 |
 | 003 | [Opinion or Observation](katas/003-opinion-or-observation.md)         | Ground feedback in evidence, not preference                       |
-| 004 | [The Blocker Brief](katas/004-blocker-brief.md)                       | Translate technical constraints into actionable language          |
+| 004 | [The Blocker Brief](katas/004-blocker-brief.md)                       | Explain a technical constraint so a non-engineer can act on it    |
 | 005 | [The Tradeoff Statement](katas/005-tradeoff-statement.md)             | Articulate what a decision costs, not just what it gains          |
 | 006 | [The Question Before the Answer](katas/006-question-before-answer.md) | Develop others by resisting the urge to solve for them            |
 | 007 | [The Line Before the Pressure](katas/007-line-before-pressure.md)     | Turn escalation from a stress response into a deliberate decision |
-| 008 | [The Thing You Did Not Say](katas/008-thing-you-did-not-say.md)       | Confront avoidance by naming what you held back                   |
+| 008 | [The Thing You Did Not Say](katas/008-thing-you-did-not-say.md)       | Say on paper what you would not say out loud                      |
+| 009 | [The Debt Sentence](katas/009-debt-sentence.md)                       | Write down what is wrong before you ship it                       |
 
 <!-- END KATAS -->
 
