@@ -1,18 +1,18 @@
 # Leadership Micro Katas
 
-Software engineers who move into leadership roles lose the feedback loops that made them good. Code compiles or it doesn't. Tests pass, or they fail. Whether you just answered a question someone needed to work through themselves produces no signal. Neither does staying silent when you see a risk nobody named.
+Leadership habits form under pressure or they form before it.
 
-Without practice, the defaults win. You code when you should delegate. You answer when you should ask. You avoid the hard conversation because the cost is immediate and the silence feels free. These are not character flaws. They are untrained responses in an environment that does not correct them.
+Software engineers who move into lead roles lose the feedback loops that made them good. Code compiles or it does not. Tests pass or they fail. Whether you just answered a question someone needed to work through themselves produces no signal. Neither does staying silent when you see a risk nobody named. Without practice, the defaults win.
 
-Dave Thomas created _Code Kata_ because programmers perform but rarely practice. Ted Neward created _Architectural Katas_ because design judgment needs the same kind of repetition. Both demonstrated that focused, repeated practice of a single behavior builds skill in ways that study cannot.
+Each kata is one micro-habit anchored to a moment you are already in. A ticket lands. A standup ends. You are about to ship code you know is not right. The trigger fires, you do a two-minute practice, you produce something written. Then you move on.
 
-Leadership Micro Katas apply the same principle to the transition from individual contributor to tech lead. Each takes under 15 minutes and fits inside a review, a decision, or a conversation that is already happening.
+No workshop. No coach. No permission required. Just the moment, the practice, and the principle you remember next time.
 
-For more on the approach, see [Foundations](docs/foundations.md).
+These katas are for software engineers preparing for a lead role. The habits are meant to be in place before the title arrives.
+
+For the thinking behind the format, see [Foundations](docs/foundations.md).
 
 ## Katas
-
-This is the catalogue. Each kata is self-contained and can be practiced in any order.
 
 | #   | Kata                                                                  | Behavior                                                          |
 | --- | --------------------------------------------------------------------- | ----------------------------------------------------------------- |
