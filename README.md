@@ -14,6 +14,8 @@ For the thinking behind the format, see [Foundations](docs/foundations.md).
 
 ## Katas
 
+<!-- BEGIN KATAS -->
+
 | #   | Kata                                                                  | Behavior                                                          |
 | --- | --------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | 001 | [Assumption Inventory](katas/001-assumption-inventory.md)             | Surface hidden assumptions before they become surprises           |
@@ -24,6 +26,8 @@ For the thinking behind the format, see [Foundations](docs/foundations.md).
 | 006 | [The Question Before the Answer](katas/006-question-before-answer.md) | Develop others by resisting the urge to solve for them            |
 | 007 | [The Line Before the Pressure](katas/007-line-before-pressure.md)     | Turn escalation from a stress response into a deliberate decision |
 | 008 | [The Thing You Did Not Say](katas/008-thing-you-did-not-say.md)       | Confront avoidance by naming what you held back                   |
+
+<!-- END KATAS -->
 
 Pick one. Any one. Practice it for a week. At the end of the week, write down 3 things:
 

@@ -71,13 +71,14 @@ readme:
 	    for (i = 1; i <= n; i++) printf rfmt, nums[i], links[i], behaviors[i]; \
 	  }' katas/[0-9][0-9][0-9]-*.md > "$$tmp"; \
 	awk -v tablefile="$$tmp" ' \
-	  /^\|/ && !replaced { \
+	  /<!-- BEGIN KATAS -->/ { \
+	    print; print ""; \
 	    while ((getline line < tablefile) > 0) print line; \
 	    close(tablefile); \
-	    replaced = 1; skip = 1; next \
+	    skip = 1; next \
 	  } \
-	  skip && /^\|/ { next } \
-	  skip && !/^\|/ { skip = 0 } \
+	  /<!-- END KATAS -->/ { print ""; skip = 0 } \
+	  skip { next } \
 	  { print } \
 	' README.md > README.md.tmp && mv README.md.tmp README.md; \
 	rm -f "$$tmp"
