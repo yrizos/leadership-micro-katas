@@ -10,7 +10,7 @@ No workshop. No coach. No permission required. Just the moment, the practice, an
 
 These katas are for software engineers preparing for a lead role. The habits are meant to be in place before the title arrives.
 
-For the thinking behind the format, see [Foundations](docs/foundations.md).
+For the thinking behind the format, see [Rationale](docs/rationale.md).
 
 ## Katas
 
@@ -46,7 +46,7 @@ Then pick another.
 │ ├── 002-pre-mortem-minute.md
 │ └── ...
 ├── docs/                          # Supporting documentation
-│ └── foundations.md               # Design principles behind the format
+│ └── rationale.md                 # Thinking behind the format
 ├── rules/                         # Standards for agents and human contributors
 │ ├── git.md                       # Branching, commit, and history rules
 │ └── writing.md                   # Prose and formatting standards
