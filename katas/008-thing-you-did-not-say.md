@@ -1,6 +1,6 @@
 ---
 number: 8
-behavior: Confront avoidance by naming what you held back
+behavior: Say on paper what you would not say out loud
 ---
 
 # The Thing You Did Not Say
