@@ -1,6 +1,6 @@
 ---
 number: 4
-behavior: Translate technical constraints into actionable language
+behavior: Explain a technical constraint so a non-engineer can act on it
 ---
 
 # The Blocker Brief
