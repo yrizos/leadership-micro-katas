@@ -1,4 +1,11 @@
-.PHONY: install-hooks uninstall-hooks check readme
+.PHONY: help check readme install-hooks uninstall-hooks
+
+help:
+	@printf '%s\n' \
+	  'check           Validate kata metadata and format' \
+	  'readme          Regenerate the README kata table' \
+	  'install-hooks   Install local Git hooks' \
+	  'uninstall-hooks Remove local Git hooks'
 
 # Point this repository at versioned hooks under .githooks/.
 install-hooks:
