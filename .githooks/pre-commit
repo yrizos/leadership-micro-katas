@@ -69,4 +69,12 @@ if ! printf '%s\n' "$desc" | grep -Eq '^[a-z0-9]+(-[a-z0-9]+)*$'; then
   exit 1
 fi
 
+# Validate kata frontmatter when any kata file is staged.
+if git diff --cached --name-only --diff-filter=ACMR | grep -Eq '^katas/[0-9]{3}-.*\.md$'; then
+  if ! make -s check; then
+    echo "pre-commit: kata validation failed (make check)" >&2
+    exit 1
+  fi
+fi
+
 exit 0
