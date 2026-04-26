@@ -48,11 +48,25 @@ Then pick another.
 │ └── ...
 ├── docs/                          # Supporting documentation
 │ └── rationale.md                 # Thinking behind the format
-├── rules/                         # Standards for agents and human contributors
-│ ├── git.md                       # Branching, commit, and history rules
-│ └── writing.md                   # Prose and formatting standards
 ├── AGENTS.md                      # Rules for agents
+├── CONTRIBUTING.md                # Contribution guidance
 ├── LICENSE
 ├── Makefile                       # Project automation
 └── README.md
 ```
+
+## Contributing
+
+Contributions go through GitHub issues and pull requests. New kata ideas should start as issues; small fixes can go straight to a pull request.
+
+See [Contributing](CONTRIBUTING.md) for the kata format, contribution model, branch naming, commit message format, and local checks.
+
+## Git Hooks
+
+This repository includes optional local Git hooks for branch names, commit messages, and kata validation.
+
+```sh
+make install-hooks
+```
+
+The hooks enforce the public contribution rules in [Contributing](CONTRIBUTING.md).

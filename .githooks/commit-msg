@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Enforces rules/git.md commit message format on the subject line.
+# Enforces CONTRIBUTING.md commit message format on the subject line.
 # See README.md (Git hooks) for scope and limits.
 
 set -e
@@ -20,14 +20,14 @@ fi
 
 # No scope: reject type(scope):
 case "$first_line" in
-  *\(*) echo "commit-msg: scope in subject is not allowed, use \"type: subject\" only (rules/git.md)" >&2
+  *\(*) echo "commit-msg: scope in subject is not allowed, use \"type: subject\" only (CONTRIBUTING.md)" >&2
         exit 1 ;;
 esac
 
-# type: subject — allowed types from rules/git.md
+# type: subject, with allowed types from CONTRIBUTING.md
 pattern='^(feat|fix|refactor|perf|test|docs|build|ci|chore): .+'
 if ! printf '%s\n' "$first_line" | grep -Eq "$pattern"; then
-  echo "commit-msg: first line must be \"<type>: <subject>\" with an allowed type (rules/git.md)" >&2
+  echo "commit-msg: first line must be \"<type>: <subject>\" with an allowed type (CONTRIBUTING.md)" >&2
   echo "  got: $first_line" >&2
   exit 1
 fi
@@ -39,16 +39,16 @@ if [ "$len" -gt 72 ]; then
 fi
 
 case "$first_line" in
-  *.) echo "commit-msg: subject line must not end with a period (rules/git.md)" >&2
+  *.) echo "commit-msg: subject line must not end with a period (CONTRIBUTING.md)" >&2
       exit 1 ;;
 esac
 
-# Obvious prohibited one-word vague subjects (rules/git.md Prohibited commit content)
+# Obvious prohibited vague subjects from CONTRIBUTING.md
 subject="${first_line#*: }"
 subject_lc=$(printf '%s' "$subject" | tr '[:upper:]' '[:lower:]')
 for bad in update updates cleanup fixes changes improvements stuff misc wip tweaks 'fix stuff' 'quick fix' 'minor fix' 'small fix' 'various fixes' 'minor changes'; do
   if [ "$subject_lc" = "$bad" ]; then
-    echo "commit-msg: subject is too vague: \"$subject\" (rules/git.md)" >&2
+    echo "commit-msg: subject is too vague: \"$subject\" (CONTRIBUTING.md)" >&2
     exit 1
   fi
 done
