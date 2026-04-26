@@ -1,16 +1,21 @@
-# Leadership Micro Katas
+<h1 align="center">Leadership Micro Katas</h1>
 
-Leadership habits form under pressure or they form before it.
+<p align="center">Deliberate practice for the parts of tech leadership that do not announce themselves.</p>
 
-Software engineers who move into lead roles lose the feedback loops that made them good. Code compiles or it does not. Tests pass or they fail. Whether you just answered a question someone needed to work through themselves produces no signal. Neither does staying silent when you see a risk nobody named. Without practice, the defaults win.
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--SA%204.0-lightgrey.svg" alt="CC BY-SA 4.0"></a>
+  <img src="https://img.shields.io/badge/katas-9-blue" alt="9 katas">
+</p>
 
-Each kata is one micro-habit anchored to a moment you are already in. A ticket lands. A standup ends. You are about to ship code you know is not right. The trigger fires, you do a two-minute practice, you produce something written. Then you move on.
+---
 
-No workshop. No coach. No permission required. Just the moment, the practice, and the principle you remember next time.
+The promotion does not come with a manual. The first time you have to deliver bad news, push back on a deadline, or sit with someone else's uncertainty, you find out what your defaults are. The defaults you brought from engineering rarely fit the job you have just stepped into.
 
-These katas are for software engineers preparing for a lead role. The habits are meant to be in place before the title arrives.
+A kata is a small prepared response to a moment that keeps showing up. A ticket lands and your hand moves toward the keyboard. A standup ends with three people unclear and nobody saying so. You are about to merge code you would rather not defend out loud.
 
-For the thinking behind the format, see [Rationale](docs/rationale.md).
+The trigger arrives, you give it 5 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed.
+
+Just a habit quietly in place before the role asks for it.
 
 ## Katas
 
@@ -30,43 +35,31 @@ For the thinking behind the format, see [Rationale](docs/rationale.md).
 
 <!-- END KATAS -->
 
-Pick one. Any one. Practice it for a week. At the end of the week, write down 3 things:
+Pick one and stay with it for a week. At the end of the week, take a moment to note:
 
-- Did the moment arise?
+- Did the moment come up?
 - What did you do?
 - What would you change?
 
-Then pick another.
+Then move on to another.
 
-## Repository Layout
+## Repository layout
 
 ```
 .
-├── katas/                         # Kata catalog
-│ ├── 001-assumption-inventory.md
-│ ├── 002-pre-mortem-minute.md
-│ └── ...
-├── docs/                          # Supporting documentation
-│ └── rationale.md                 # Thinking behind the format
-├── AGENTS.md                      # Rules for agents
-├── CONTRIBUTING.md                # Contribution guidance
+├── katas/                             # The catalog
+│   ├── 001-assumption-inventory.md
+│   ├── 002-pre-mortem-minute.md
+│   └── ...
+├── docs/                              # Supporting docs
+│   └── rationale.md                   # Thinking behind the format
+├── AGENTS.md                          # Rules for agents working in this repo
+├── CONTRIBUTING.md                    # Contribution guidance
 ├── LICENSE
-├── Makefile                       # Project automation
+├── Makefile                           # Project automation
 └── README.md
 ```
 
 ## Contributing
 
-Contributions go through GitHub issues and pull requests. New kata ideas should start as issues; small fixes can go straight to a pull request.
-
-See [Contributing](CONTRIBUTING.md) for the kata format, contribution model, branch naming, commit message format, and local checks.
-
-## Git Hooks
-
-This repository includes optional local Git hooks for branch names, commit messages, and kata validation.
-
-```sh
-make install-hooks
-```
-
-The hooks enforce the public contribution rules in [Contributing](CONTRIBUTING.md).
+Contributions are welcome, and the guidance for getting involved is gathered in [CONTRIBUTING.md](CONTRIBUTING.md).
