@@ -18,8 +18,6 @@ Lacerenza et al. studied 335 leadership training programs and found that practic
 
 The katas are designed to run inside your actual work, not alongside it. The trigger is a moment you are already in. The behavior is narrow enough to focus on deliberately. The kata constrains the action, not the situation.
 
-A colleague practicing alongside you is part of the design. This is why the format is built around a practice partner.
-
 ## Why These Behaviors
 
 Patrick Kua interviewed more than 35 tech leads for _Talking with Tech Leads_. The same pattern surfaces throughout: engineers in leadership roles invest disproportionately in technical skills because those are familiar, and systematically underinvest in people and process skills. Not because they lack the capacity, but because the environment does not develop those skills the way it develops technical ones.
