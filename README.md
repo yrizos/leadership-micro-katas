@@ -13,7 +13,7 @@ The promotion does not come with a manual. The first time you have to deliver ba
 
 A kata is a small prepared response to a moment that keeps showing up. A ticket lands and your hand moves toward the keyboard. A standup ends with three people unclear and nobody saying so. You are about to merge code you would rather not defend out loud.
 
-The trigger arrives, you give it 5 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed.
+The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed.
 
 Just a habit quietly in place before the role asks for it.
 
