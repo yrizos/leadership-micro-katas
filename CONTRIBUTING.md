@@ -1,45 +1,47 @@
 # Contributing
 
-Thanks for considering a contribution. This is a small, curated catalog, and a single thoughtful change can make it noticeably better. Typo fixes, sharpened katas, and new kata proposals are all welcome.
+This is a small, curated catalog. New katas, sharper versions of existing ones, fixes to documentation, tooling, links, or metadata are all welcome.
 
-If you are new to open source, open an issue or a draft pull request and ask any question you have. You do not need to get it right on the first try.
+Reading [rationale](docs/rationale.md) first is the best place to start. The thinking behind the format shapes most of what makes a kata fit here, and it answers a lot of later questions in advance.
 
-## Contribution Model
+If this is your first time contributing to an open source project, opening an issue or a draft pull request to ask a question is fine.
 
-All repository changes go through a pull request.
+## Before You Open a Pull Request
 
-Open a GitHub issue first for new kata ideas, substantial rewrites, rationale changes, and structural changes. Small fixes can go straight to a pull request: typo corrections, broken links, metadata fixes, formatting corrections.
+Most contributions begin with a GitHub issue. New katas, substantial rewrites, changes to the rationale, and structural changes are best discussed there first, so the catalog stays coherent and you do not put work into something that will not land. Smaller things, like typos, broken links, metadata fixes, and formatting, can go straight to a pull request.
 
-This project uses the standard GitHub fork and pull request workflow. If you have not done it before, GitHub's [Contributing to a project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) guide walks through every step. Maintainers may create branches in the main repository, but their changes still go through pull request review.
+The project uses the standard GitHub fork and pull request workflow. If that is unfamiliar, GitHub's [Contributing to a project](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project) guide covers it. Maintainers may create branches in the main repository, but their changes still go through pull request review.
 
-## What Belongs Here
+## What Fits in the Catalog
 
-Contributions should improve the usefulness, clarity, or consistency of the kata catalog.
+Contributions should improve the usefulness, clarity, or consistency of the catalog. What counts as a good fit follows from [Rationale](docs/rationale.md), which is the other reason to read it early.
 
-Good contributions include:
+The kinds of contributions that tend to fit:
 
-- New leadership katas for software engineers preparing for lead roles
-- Clarifications to existing katas that preserve their behavior
-- Corrections to rationale, references, links, or repository documentation
-- Tooling changes that support kata validation or contribution quality
+- New katas for software engineers preparing for a lead role.
+- Clarifications to existing katas, where the underlying behavior is preserved.
+- Corrections to rationale, references, links, or repository documentation.
+- Tooling changes that support kata validation or contribution quality.
 
-Please skip contributions that only add general leadership advice, motivational language, or broad opinion without a concrete practice.
+General leadership advice, motivational language, or broad opinion without a concrete practice is not a good fit, even when well written. The catalog is about prepared responses to specific moments, not leadership in the abstract.
 
-## New Kata Proposals
+## Proposing a New Kata
 
-Open an issue before adding a new kata. Include:
+A new kata starts as an issue. The proposal should cover the trigger moment, the behavior the kata practices, the proposed steps, the closing principle, and a short note on why this kata belongs alongside the others. The maintainer may suggest changes before the pull request, to keep the catalog coherent and avoid near-duplicates.
 
-- The trigger moment
-- The behavior the kata practices
-- The proposed steps
-- The closing principle
-- Why the kata belongs in this catalog
+## Writing a Kata
 
-The maintainer may ask for changes before a pull request. This keeps the catalog coherent and avoids duplicate katas.
+Each kata teaches a single leadership micro-habit, attached to a real moment the reader already encounters in their week. A kata is not an essay, a checklist, or a lesson plan. It is a small trigger, a short practice, and a principle the reader can carry into the next time the moment shows up.
 
-## Kata Format
+The practice should produce something visible. In this repository that usually means the reader writes a sentence, a list, a condition, a question, or a short note.
 
-Every kata file should use this structure:
+Triggers work best when they name a real moment, like a ticket landing for refinement, a teammate bringing a problem, or being about to ship code that is not quite right. Broader prompts, like "communicate better," "be more strategic," or "think like a leader," do not give the reader anything to do.
+
+Steps work best when they are short, executable, and observable. Verbs that produce something on the page, like write, list, flag, name, ask, check, or remove, work better than verbs that describe a mental state.
+
+The closing principle should compress the lesson into a single sentence, ideally one that names a cost, a tension, a default behavior, or a decision rule.
+
+A kata file looks like this:
 
 ```markdown
 ---
@@ -58,52 +60,15 @@ Name the trigger moment.
 **State the principle the reader should remember.**
 ```
 
-The filename should use a 3-digit prefix and a lowercase hyphenated title, for example `010-escalation-threshold.md`.
+The filename uses a 3-digit prefix and a lowercase hyphenated title, for example `010-escalation-threshold.md`. The number in the frontmatter must match the prefix, and the behavior should name the practiced capability rather than the topic area.
 
-The frontmatter number must match the filename prefix. The behavior should name the practiced capability, not the topic area.
+## Branches
 
-## Kata Style
+Branch names follow [Conventional Branch](https://conventional-branch.github.io/), in the form `<type>/<short-description>`, with lowercase words separated by hyphens. Underscores, dots, nested paths, and bare issue numbers as the whole description are not used.
 
-Each kata teaches a single leadership micro-habit. It should attach the habit to a real work moment the reader already encounters.
+The supported types are `feature`, `fix`, `hotfix`, `refactor`, `chore`, `docs`, `test`, and `release`.
 
-A kata is not an essay, checklist, or lesson plan. It is a small behavioral trigger with a short practice and a principle that should stay with the reader.
-
-The practice should produce something visible. In this repo, that usually means the reader writes a sentence, list, condition, question, or brief note.
-
-Good triggers name a moment:
-
-- A ticket lands for refinement.
-- A teammate brings you a problem.
-- You are about to ship code you know is not right.
-
-Reject broad prompts like:
-
-- Communicate better.
-- Be more strategic.
-- Think like a leader.
-
-Steps should be short, executable, and observable. Prefer verbs that create output: write, list, flag, name, ask, check, remove.
-
-The closing principle should compress the lesson into a single sentence. It should reveal a cost, tension, default behavior, or decision rule.
-
-## Branch Names
-
-Branches use [Conventional Branch](https://conventional-branch.github.io/) with the project-specific constraints below.
-
-Use the structure `<type>/<short-description>` with lowercase words separated by hyphens. Do not use underscores, dots, nested paths, or an issue number as the whole description.
-
-Allowed branch types:
-
-- `feature`: new functionality
-- `fix`: bug fix
-- `hotfix`: urgent production fix
-- `refactor`: restructuring without behavior change
-- `chore`: maintenance work
-- `docs`: documentation changes
-- `test`: test additions or corrections
-- `release`: release preparation
-
-Examples:
+A few examples:
 
 ```text
 docs/add-escalation-kata
@@ -115,31 +80,11 @@ The optional pre-commit hook enforces this format on topic branches.
 
 ## Commit Messages
 
-Commits use [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) with the project-specific constraints below.
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), in the form `<type>: <subject>`. The supported types are `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, `ci`, and `chore`.
 
-Use the structure `<type>: <subject>`.
+A few rules keep the history readable. The subject stays at 72 characters or fewer and uses the imperative mood. The subject does not end with a period, and vague subjects like `docs: update` or `fix: cleanup` are best avoided.
 
-Allowed commit types:
-
-- `feat`
-- `fix`
-- `refactor`
-- `perf`
-- `test`
-- `docs`
-- `build`
-- `ci`
-- `chore`
-
-Rules:
-
-- Keep the subject at 72 characters or fewer.
-- Use imperative mood.
-- Do not use a scope. Write `docs: ...`, not `docs(readme): ...`.
-- Do not end the subject with a period.
-- Avoid vague subjects like `docs: update` or `fix: cleanup`.
-
-Example:
+For example:
 
 ```text
 docs: add escalation threshold kata
@@ -149,23 +94,22 @@ The optional commit message hook enforces the subject format.
 
 ## Local Checks
 
-The project ships a small Makefile that covers everything you need before opening a pull request.
+A small Makefile covers everything useful to run before opening a pull request.
 
-After changing kata files, validate the frontmatter contract:
+After editing kata files, validate the frontmatter contract:
 
 ```sh
 make check
 ```
 
-After adding, removing, renaming, retitling, or changing the behavior frontmatter for a kata, regenerate the README table:
+After adding, removing, renaming, retitling, or changing the behavior frontmatter of a kata, regenerate the README table:
 
 ```sh
 make readme
 ```
 
-To run the branch, commit message, and kata checks automatically on every commit, install the local Git hooks once:
+The branch, commit message, and kata checks can also run automatically on every commit. The hooks need to be installed once:
 
 ```sh
 make install-hooks
 ```
-
