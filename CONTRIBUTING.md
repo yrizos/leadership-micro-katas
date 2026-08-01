@@ -108,8 +108,15 @@ After adding, removing, renaming, retitling, or changing the behavior frontmatte
 make readme
 ```
 
-The branch, commit message, and kata checks can also run automatically on every commit. The hooks need to be installed once:
+These checks can also run automatically through [pre-commit](https://pre-commit.com). Install it, then run:
 
 ```sh
 make install-hooks
 ```
+
+It sets up two hooks:
+
+- `pre-commit`: checks the branch name, and validates kata frontmatter when kata files are staged
+- `commit-msg`: checks the commit subject format
+
+Remove both with `make uninstall-hooks`.

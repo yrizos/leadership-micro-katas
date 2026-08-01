@@ -7,13 +7,13 @@ help:
 	  'install-hooks   Install local Git hooks' \
 	  'uninstall-hooks Remove local Git hooks'
 
-# Point this repository at versioned hooks under .githooks/.
+# Install/remove the hooks defined in .pre-commit-config.yaml via
+# pre-commit (https://pre-commit.com).
 install-hooks:
-	chmod +x .githooks/commit-msg .githooks/pre-commit
-	git config core.hooksPath .githooks
+	pre-commit install --hook-type pre-commit --hook-type commit-msg
 
 uninstall-hooks:
-	git config --unset core.hooksPath || true
+	pre-commit uninstall --hook-type pre-commit --hook-type commit-msg
 
 # Validate the kata frontmatter contract that readme and downstream
 # consumers rely on: number present and matching the filename prefix,
