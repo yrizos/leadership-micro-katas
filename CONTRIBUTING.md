@@ -117,6 +117,6 @@ make install-hooks
 It sets up two hooks:
 
 - `pre-commit`: checks the branch name, and validates kata frontmatter when kata files are staged
-- `commit-msg`: checks the commit subject format
+- `commit-msg`: checks the commit message with [gitlint](https://jorisroovers.com/gitlint/), configured in `.gitlint`
 
 Remove both with `make uninstall-hooks`.

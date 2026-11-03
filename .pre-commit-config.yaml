@@ -8,8 +8,7 @@ repos:
         stages: [pre-commit]
         pass_filenames: false
         always_run: true
-      - id: commit-msg-format
-        name: Commit message format
-        entry: .githooks/commit-msg
-        language: script
-        stages: [commit-msg]
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
