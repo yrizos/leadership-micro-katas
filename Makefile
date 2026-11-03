@@ -1,9 +1,9 @@
-.PHONY: help check readme install-hooks uninstall-hooks
+.PHONY: help check readme hooks-install hooks-uninstall
 
 KATAS := katas/[0-9][0-9][0-9]-*.md
 
 help:
-	@awk 'BEGIN { FS = ":.*## "; if (system("test -t 1") == 0) { c = "\033[36m"; r = "\033[0m" } } /^[a-z-]+:.*## / { printf "%s%-15s%s %s\n", c, $$1, r, $$2 }' $(MAKEFILE_LIST)
+	@awk 'BEGIN { FS = ": ## "; if (system("test -t 1") == 0) { c = "\033[36m"; r = "\033[0m" } } /^[a-z\\:-]+: ## / { name = $$1; gsub(/\\/, "", name); printf "%s%-15s%s %s\n", c, name, r, $$2 }' $(MAKEFILE_LIST)
 
 # Validate the kata frontmatter contract that readme and downstream
 # consumers rely on: number present and matching the filename prefix,
@@ -21,8 +21,8 @@ readme: ## Regenerate the README kata table
 
 # Install/remove the hooks defined in .pre-commit-config.yaml via
 # pre-commit (https://pre-commit.com).
-install-hooks: ## Install local Git hooks
+hooks-install: ## Install local Git hooks
 	pre-commit install --hook-type pre-commit --hook-type commit-msg
 
-uninstall-hooks: ## Remove local Git hooks
+hooks-uninstall: ## Remove local Git hooks
 	pre-commit uninstall --hook-type pre-commit --hook-type commit-msg

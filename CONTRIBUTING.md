@@ -111,7 +111,7 @@ make readme
 These checks can also run automatically through [pre-commit](https://pre-commit.com). Install it, then run:
 
 ```sh
-make install-hooks
+make hooks-install
 ```
 
 It sets up two hooks:
@@ -119,4 +119,4 @@ It sets up two hooks:
 - `pre-commit`: checks the branch name, and validates kata frontmatter when kata files are staged
 - `commit-msg`: checks the commit message with [gitlint](https://jorisroovers.com/gitlint/), configured in `.gitlint`
 
-Remove both with `make uninstall-hooks`.
+Remove both with `make hooks-uninstall`.
