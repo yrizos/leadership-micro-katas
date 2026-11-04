@@ -3,7 +3,7 @@ repos:
     hooks:
       - id: branch-and-kata-check
         name: Branch naming and kata validation
-        entry: .githooks/pre-commit
+        entry: scripts/check-branch-and-katas.sh
         language: script
         stages: [pre-commit]
         pass_filenames: false
