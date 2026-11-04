@@ -1,3 +1,7 @@
+# Builds the README kata table from the kata files passed as arguments.
+# Run by `make readme`. Reads number and behavior from each frontmatter
+# and the title from the first H1, then prints an aligned markdown table
+# to stdout.
 FNR == 1 && n > 0 { titles[n] = title; fnames[n] = fname; in_fm = 0; fm_done = 0; title = "" }
 FNR == 1 { fname = FILENAME; sub(/.*\//, "", fname) }
 /^---$/ && !fm_done { in_fm = !in_fm; if (!in_fm) fm_done = 1; next }

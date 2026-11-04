@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
-# Enforces CONTRIBUTING.md branch naming for commits on topic branches.
-# See README.md (Git hooks) for scope and limits.
+# Pre-commit hook run through .pre-commit-config.yaml.
+# Enforces the CONTRIBUTING.md branch naming rules on topic branches and
+# runs `make check` when kata files are staged.
 
 set -e
 

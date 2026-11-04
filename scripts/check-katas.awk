@@ -1,3 +1,8 @@
+# Validates the kata files passed as arguments. Run by `make check`.
+# Each kata needs a frontmatter number that matches its filename prefix,
+# a non-empty behavior, exactly 1 H1 and exactly 1 bold closing principle.
+# Numbers must be unique across files. Prints a ✓ or ✗ line per file and
+# exits 1 when any file fails.
 BEGIN {
   if (system("test -t 1") == 0) { green = "\033[32m"; red = "\033[31m"; reset = "\033[0m" }
 }
