@@ -1,4 +1,4 @@
-.PHONY: help check readme hooks-install hooks-uninstall
+.PHONY: help check fix lint readme hooks-install hooks-uninstall
 
 KATAS := katas/[0-9][0-9][0-9]-*.md
 
@@ -11,6 +11,18 @@ help:
 # closing principle.
 check: ## Validate kata metadata and format
 	@awk -f scripts/check-katas.awk $(KATAS)
+
+fix: readme ## Fix trailing whitespace and line endings, and regenerate the README kata table
+	@status=0; \
+	pre-commit run trailing-whitespace --all-files || status=1; \
+	pre-commit run mixed-line-ending --all-files || status=1; \
+	exit $$status
+
+lint: ## Run all linters and report problems
+	@status=0; \
+	for h in check-merge-conflict check-yaml checkmake shellcheck; do pre-commit run $$h --all-files || status=1; done; \
+	$(MAKE) -s check || status=1; \
+	exit $$status
 
 readme: ## Regenerate the README kata table
 	@tmp=$$(mktemp); \

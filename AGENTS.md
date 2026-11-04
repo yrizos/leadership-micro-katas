@@ -119,3 +119,11 @@ Avoid repeating concepts, words, or phrases across sentences, paragraphs, and se
 ## Extension Rules
 
 New rules must not weaken or override existing ones unless explicitly stated. New sections must define their scope and state precedence where overlap exists.
+
+## Pre-commit Hooks
+
+Applies to the hooks in `.pre-commit-config.yaml` and the `make fix` and `make lint` targets.
+
+- Fix everything that can be fixed in pre-commit. When a hook can fix a problem, it fixes the problem and still stops the commit if errors remain that it cannot fix.
+- Add every hook that fixes to `make fix`, so the fixes can also run manually.
+- Add every hook that only checks to `make lint`, so the checks can also run manually.
