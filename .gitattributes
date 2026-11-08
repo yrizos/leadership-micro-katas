@@ -9,6 +9,11 @@
 *.yaml        text
 LICENSE       text
 Makefile      text
+*.html        text
+*.toml        text
+*.css         text
+*.js          text
+*.svg         text
 
 # Force LF on files that break with CRLF
 *.sh          text eol=lf
@@ -20,6 +25,8 @@ Makefile      text
 *.gif         binary
 *.ico         binary
 *.webp        binary
+*.woff        binary
+*.woff2       binary
 *.pdf         binary
 *.zip         binary
 *.gz          binary
