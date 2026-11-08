@@ -80,6 +80,16 @@ h2 {
   margin-block: -0.8rem;
 }
 
+.site-menu,
+.site-menu::details-content {
+  display: contents;
+  content-visibility: visible;
+}
+
+.site-menu summary {
+  display: none;
+}
+
 .site-nav {
   display: flex;
   gap: 2rem;
@@ -293,16 +303,53 @@ h2 {
   }
 
   .site-header {
-    row-gap: 0;
-    padding: 1rem 0 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0;
+    padding: 1rem 0;
   }
 
   .site-title {
     margin-block: -0.925rem;
   }
 
+  .site-menu summary {
+    display: block;
+    padding: 0.5rem;
+    margin-right: -0.5rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--color-primary-text);
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .site-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .site-menu summary::before {
+    content: "☰";
+  }
+
+  .site-menu[open] summary::before {
+    content: "✕";
+  }
+
+  .site-menu::details-content {
+    display: block;
+    grid-column: 1 / -1;
+  }
+
+  .site-menu:not([open])::details-content {
+    display: none;
+  }
+
   .site-nav {
-    gap: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding-top: 0.5rem;
   }
 
   .site-nav a {
