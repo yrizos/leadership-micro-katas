@@ -340,6 +340,14 @@ h2 {
   margin-bottom: 0;
 }
 
+.rationale-body ul {
+  list-style: square;
+}
+
+.rationale-body li::marker {
+  color: var(--color-accent);
+}
+
 .rationale-references .rationale-body {
   padding-left: 2rem;
   border-left: 2px solid var(--color-accent);

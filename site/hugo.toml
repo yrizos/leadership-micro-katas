@@ -7,7 +7,7 @@ title = 'Leadership Micro Katas'
 
 [[menus.main]]
   name = 'About'
-  url = '#'
+  pageRef = '/about'
   weight = 10
 [[menus.main]]
   name = 'Rationale'
@@ -34,6 +34,3 @@ title = 'Leadership Micro Katas'
   [[module.mounts]]
     source = '../katas'
     target = 'content/katas'
-  [[module.mounts]]
-    source = '../docs/rationale.md'
-    target = 'content/rationale.md'
