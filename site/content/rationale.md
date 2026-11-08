@@ -48,18 +48,11 @@ General principles require judgment at the moment of application, which is exact
 
 ## Further Reading
 
-Hughes, A.M., Zajac, S., Woods, A.L., and Salas, E. (2020). The role of work environment in training sustainment: a meta-analysis. _Human Factors_, 62(1).
-
-Kua, P. (2015). _Talking with Tech Leads_.
-
-Lacerenza, C.N., Reyes, D.L., Marlow, S.L., Joseph, D.L., and Salas, E. (2017). Leadership training design, delivery, and implementation: a meta-analysis. _Journal of Applied Psychology_, 102(12).
-
-Neward, T. Architectural Katas. https://www.architecturalkatas.com.
-
-Orosz, G. (2023). _The Software Engineer's Guidebook_.
-
-Rother, M. (2009). _Toyota Kata_.
-
-Thomas, D. (2003). Code Kata. http://codekata.com.
-
-Wallo, A., Lundqvist, D., and Coetzer, A. (2024). Learning-oriented leadership in organizations: an integrative review of qualitative studies. _Human Resource Development Review_, 23(2).
+- Hughes, A.M., Zajac, S., Woods, A.L., and Salas, E. (2020). The role of work environment in training sustainment: a meta-analysis. Human Factors, 62(1).
+- Kua, P. (2015). Talking with Tech Leads.
+- Lacerenza, C.N., Reyes, D.L., Marlow, S.L., Joseph, D.L., and Salas, E. (2017). Leadership training design, delivery, and implementation: a meta-analysis. Journal of Applied Psychology, 102(12).
+- Neward, T. [Architectural Katas](https://www.architecturalkatas.com).
+- Orosz, G. (2023). The Software Engineer's Guidebook.
+- Rother, M. (2009). Toyota Kata.
+- Thomas, D. (2003). [Code Kata](http://codekata.com).
+- Wallo, A., Lundqvist, D., and Coetzer, A. (2024). Learning-oriented leadership in organizations: an integrative review of qualitative studies. Human Resource Development Review, 23(2).
