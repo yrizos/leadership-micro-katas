@@ -9,4 +9,4 @@ types=feat,fix,refactor,perf,test,docs,build,ci,chore
 line-length=72
 
 [title-match-regex]
-regex=^[a-z]+: (?!(?i:update|updates|cleanup|fixes|changes|improvements|stuff|misc|wip|tweaks|fix stuff|quick fix|minor fix|small fix|various fixes|minor changes)$)
+regex=^[a-z]+(\((katas|examples|agents|hooks|make)\))?: (?!(?i:update|updates|cleanup|fixes|changes|improvements|stuff|misc|wip|tweaks|fix stuff|quick fix|minor fix|small fix|various fixes|minor changes)$)

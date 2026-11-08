@@ -66,7 +66,7 @@ The filename uses a 3-digit prefix and a lowercase hyphenated title, for example
 
 Branch names follow [Conventional Branch](https://conventional-branch.github.io/), in the form `<type>/<short-description>`, with lowercase words separated by hyphens. Underscores, dots, nested paths, and bare issue numbers as the whole description are not used.
 
-The supported types are `feature`, `fix`, `hotfix`, `refactor`, `chore`, `docs`, `test`, and `release`.
+The supported types are `feature`, `feat`, `fix`, `hotfix`, `refactor`, `chore`, `docs`, `test`, and `release`.
 
 A few examples:
 
@@ -80,7 +80,15 @@ The optional pre-commit hook enforces this format on topic branches.
 
 ## Commit Messages
 
-Commits follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), in the form `<type>: <subject>`. The supported types are `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, `ci`, and `chore`.
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), in the form `<type>: <subject>` or `<type>(<scope>): <subject>`. The supported types are `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, `ci`, and `chore`.
+
+The scope is optional. The supported scopes are:
+
+- `katas` for kata files in `katas/`
+- `examples` for kata examples in `examples/`
+- `agents` for `AGENTS.md`, `CLAUDE.md`, and `.claude/`
+- `hooks` for `.pre-commit-config.yaml`, `.gitlint`, and hook scripts
+- `make` for the `Makefile` and the scripts it runs
 
 A few rules keep the history readable. The subject stays at 72 characters or fewer and uses the imperative mood. The subject does not end with a period, and vague subjects like `docs: update` or `fix: cleanup` are best avoided.
 
