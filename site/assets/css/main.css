@@ -306,7 +306,9 @@ h2 {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 0;
-    padding: 1rem 0;
+    margin-inline: -1.25rem;
+    padding: 1rem 1.25rem;
+    position: relative;
   }
 
   .site-title {
@@ -338,22 +340,35 @@ h2 {
 
   .site-menu::details-content {
     display: block;
-    grid-column: 1 / -1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    background: #F4F4F2;
+    interpolate-size: allow-keywords;
+    block-size: auto;
+    opacity: 1;
+    transition: block-size 0.2s ease, opacity 0.2s ease, content-visibility 0.2s allow-discrete;
   }
 
   .site-menu:not([open])::details-content {
-    display: none;
+    block-size: 0;
+    opacity: 0;
+    content-visibility: hidden;
   }
 
   .site-nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
-    padding-top: 0.5rem;
+    padding-block: 0.5rem;
+    border-block: 1px solid var(--color-dividers);
   }
 
   .site-nav a {
-    padding: 0.5rem 0;
+    padding: 0.5rem 1.25rem;
   }
 
   .site-footer a {
@@ -363,7 +378,8 @@ h2 {
   .hero {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 1.5rem 0 2.5rem;
+    margin-inline: -1.25rem;
+    padding: 1.5rem 1.25rem 2.5rem;
   }
 
   .eyebrow {
@@ -377,7 +393,8 @@ h2 {
 
   .site-footer {
     margin-top: 0.5rem;
-    padding: 0.75rem 0;
+    margin-inline: -1.25rem;
+    padding: 0.75rem 1.25rem;
   }
 
   .hero h1 {
