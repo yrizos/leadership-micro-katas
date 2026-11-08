@@ -11,7 +11,7 @@ title = 'Leadership Micro Katas'
   weight = 10
 [[menus.main]]
   name = 'Rationale'
-  url = '#'
+  pageRef = '/rationale'
   weight = 20
 
 [[cascade]]
@@ -21,6 +21,12 @@ title = 'Leadership Micro Katas'
   [cascade.target]
     path = '{/katas,/katas/**}'
 
+[[cascade]]
+  title = 'Rationale'
+  layout = 'rationale'
+  [cascade.target]
+    path = '/rationale'
+
 [module]
   [[module.mounts]]
     source = 'content'
@@ -28,3 +34,6 @@ title = 'Leadership Micro Katas'
   [[module.mounts]]
     source = '../katas'
     target = 'content/katas'
+  [[module.mounts]]
+    source = '../docs/rationale.md'
+    target = 'content/rationale.md'
