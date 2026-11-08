@@ -11,11 +11,13 @@
 
 The promotion does not come with a manual. The first time you have to deliver bad news, push back on a deadline, or sit with someone else's uncertainty, you find out what your defaults are. The defaults you brought from engineering rarely fit the job you have just stepped into.
 
-A kata is a small prepared response to a moment that keeps showing up. A ticket lands and your hand moves toward the keyboard. A standup ends with three people unclear and nobody saying so. You are about to merge code you would rather not defend out loud.
+A kata is a small prepared response to a moment that keeps showing up. A ticket lands and your hand moves toward the keyboard. A standup ends with 3 people unclear and nobody saying so. You are about to merge code you would rather not defend out loud.
 
 The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed.
 
 Just a habit quietly in place before the role asks for it.
+
+If you want to know why the katas look the way they do, [Rationale](docs/rationale.md) explains the thinking behind the format.
 
 ## Katas
 
@@ -43,23 +45,21 @@ Pick one and stay with it for a week. At the end of the week, take a moment to n
 
 Then move on to another.
 
-## Repository layout
+## Repository Layout
 
-```
+```text
 .
-├── katas/                             # The catalog
-│   ├── 001-assumption-inventory.md
-│   ├── 002-pre-mortem-minute.md
-│   └── ...
-├── docs/                              # Supporting docs
-│   └── rationale.md                   # Thinking behind the format
-├── AGENTS.md                          # Rules for agents working in this repo
-├── CONTRIBUTING.md                    # Contribution guidance
+├── katas/              # The catalog
+├── docs/
+│   └── rationale.md    # Thinking behind the format
+├── scripts/            # Scripts run by the Makefile and the Git hooks
+├── AGENTS.md           # Rules for AI agents working in this repository
+├── CONTRIBUTING.md     # How to contribute
 ├── LICENSE
-├── Makefile                           # Project automation
+├── Makefile            # Project automation
 └── README.md
 ```
 
 ## Contributing
 
-Contributions are welcome, and the guidance for getting involved is gathered in [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions are welcome, and [CONTRIBUTING.md](CONTRIBUTING.md) explains how to get involved.
