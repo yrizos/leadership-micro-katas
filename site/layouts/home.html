@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $katas := sort (site.GetPage "/katas").Pages "Params.number" }}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Deliberate Practice for Technical Leaders</p>
+    <h1>Short exercises for everyday technical leadership</h1>
+    <p class="intro">A kata is a small prepared response to a moment that keeps showing up.</p>
+    <p class="intro">The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day.</p>
+    <p class="intro">No workshop, no coach, no permission needed.</p>
+  </div>
+  <aside class="how-to">
+    <h2 class="eyebrow">How to Use Them</h2>
+    <p><strong>Choose a Kata</strong> Pick one that feels relevant right now.</p>
+    <p><strong>Practice It</strong> Work through the steps, alone or with your team.</p>
+    <p><strong>Reflect and Repeat</strong> Note what you did, what changed, and what you'll try next.</p>
+  </aside>
+</section>
+<section class="katas">
+  <h2>The Katas</h2>
+  <table>
+    <thead>
+      <tr><th>Number</th><th>Kata</th><th>Behavior to Practice</th><th></th></tr>
+    </thead>
+    <tbody>
+      {{ range $katas }}
+      {{ $title := index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}
+      <tr>
+        <td class="kata-number">{{ printf "%03d" .Params.number }}</td>
+        <td class="kata-title"><a href="#">{{ $title }}</a></td>
+        <td class="kata-behavior">{{ .Params.behavior }}</td>
+        <td class="kata-arrow"><a href="#" aria-label="{{ $title }}">↗</a></td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</section>
+{{ end }}

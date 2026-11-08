@@ -1,4 +1,30 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
-title = 'My New Hugo Project'
-theme = 'default'
+title = 'Leadership Micro Katas'
+
+[params]
+  github = 'https://github.com/yrizos/leadership-micro-katas'
+
+[[menus.main]]
+  name = 'About'
+  url = '#'
+  weight = 10
+[[menus.main]]
+  name = 'Rationale'
+  url = '#'
+  weight = 20
+
+[[cascade]]
+  [cascade.build]
+    render = 'never'
+    list = 'local'
+  [cascade.target]
+    path = '{/katas,/katas/**}'
+
+[module]
+  [[module.mounts]]
+    source = 'content'
+    target = 'content'
+  [[module.mounts]]
+    source = '../katas'
+    target = 'content/katas'

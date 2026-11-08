@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  {{ with resources.Get "css/main.css" }}
+    {{ if hugo.IsProduction }}
+      {{ with . | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">{{ end }}
+    {{ else }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+  {{ end }}
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <nav class="site-nav">
+      {{ range site.Menus.main }}
+      <a{{ if $.IsMenuCurrent "main" . }} class="active" aria-current="page"{{ end }} href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <a class="external" href="{{ site.Params.github }}">{{ partial "icon.html" "github" }}GitHub</a>
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/">{{ partial "icon.html" "creativecommons" }}CC BY-SA 4.0</a>
+  </footer>
+</body>
+</html>
