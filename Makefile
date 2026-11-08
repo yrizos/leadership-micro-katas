@@ -1,4 +1,4 @@
-.PHONY: help check fix lint readme hooks-install hooks-uninstall
+.PHONY: help check fix lint readme site hooks-install hooks-uninstall
 
 KATAS := katas/[0-9][0-9][0-9]-*.md
 
@@ -30,6 +30,9 @@ readme: ## Regenerate the README kata table
 	awk -v tablefile="$$tmp" -f scripts/splice-readme.awk README.md > README.md.tmp && mv README.md.tmp README.md && \
 	if [ -t 1 ]; then printf 'README.md  \033[32m✓\033[0m\n'; else printf 'README.md  ✓\n'; fi; \
 	rm -f "$$tmp"
+
+site: ## Run the Hugo site locally
+	hugo server --source site
 
 # Install/remove the hooks defined in .pre-commit-config.yaml via
 # pre-commit (https://pre-commit.com).
