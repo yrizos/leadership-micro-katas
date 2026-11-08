@@ -1,8 +1,8 @@
 # Contributing
 
-This is a small, curated catalog. New katas, sharper versions of existing ones, fixes to documentation, tooling, links, or metadata are all welcome.
+This is a small, curated catalog. New katas, sharper versions of existing ones, and fixes to documentation, tooling, links, or metadata are all welcome.
 
-Reading [rationale](docs/rationale.md) first is the best place to start. The thinking behind the format shapes most of what makes a kata fit here, and it answers a lot of later questions in advance.
+Reading [Rationale](docs/rationale.md) first will save you time. Most of what makes a kata fit here follows from the thinking behind the format, so it answers a lot of later questions in advance.
 
 If this is your first time contributing to an open source project, opening an issue or a draft pull request to ask a question is fine.
 
@@ -14,9 +14,7 @@ The project uses the standard GitHub fork and pull request workflow. If that is 
 
 ## What Fits in the Catalog
 
-Contributions should improve the usefulness, clarity, or consistency of the catalog. What counts as a good fit follows from [Rationale](docs/rationale.md), which is the other reason to read it early.
-
-The kinds of contributions that tend to fit:
+A good contribution makes the catalog more useful, clearer, or more consistent. These are the kinds that tend to fit:
 
 - New katas for software engineers preparing for a lead role.
 - Clarifications to existing katas, where the underlying behavior is preserved.
@@ -60,11 +58,11 @@ Name the trigger moment.
 **State the principle the reader should remember.**
 ```
 
-The filename uses a 3-digit prefix and a lowercase hyphenated title, for example `010-escalation-threshold.md`. The number in the frontmatter must match the prefix, and the behavior should name the practiced capability rather than the topic area.
+The filename starts with a 3-digit prefix followed by a lowercase hyphenated title, for example `010-escalation-threshold.md`. The `number` in the frontmatter has to match that prefix, and each kata needs its own number. Fill in `behavior` with the capability being practiced rather than the topic area. Each file also needs exactly 1 H1 for the title and exactly 1 bold line for the closing principle.
 
 ## Branches
 
-Branch names follow [Conventional Branch](https://conventional-branch.github.io/), in the form `<type>/<short-description>`, with lowercase words separated by hyphens. Underscores, dots, nested paths, and bare issue numbers as the whole description are not used.
+Branch names follow [Conventional Branch](https://conventional-branch.github.io/), in the form `<type>/<short-description>`, with lowercase words separated by hyphens. Avoid underscores, dots, and nested paths, and do not use a bare issue number as the whole description. Release branches work a little differently, because their description is a version number such as `2.4.0` or `2.4.0-rc1`.
 
 The supported types are `feature`, `feat`, `fix`, `hotfix`, `refactor`, `chore`, `docs`, `test`, and `release`.
 
@@ -74,23 +72,22 @@ A few examples:
 docs/add-escalation-kata
 fix/readme-kata-link
 chore/update-hooks
+release/2.4.0
 ```
-
-The optional pre-commit hook enforces this format on topic branches.
 
 ## Commit Messages
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), in the form `<type>: <subject>` or `<type>(<scope>): <subject>`. The supported types are `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, `ci`, and `chore`.
 
-The scope is optional. The supported scopes are:
+The scope is optional. Some common scopes are:
 
 - `katas` for kata files in `katas/`
 - `examples` for kata examples in `examples/`
-- `agents` for `AGENTS.md`, `CLAUDE.md`, and `.claude/`
+- `agents` for `AGENTS.md` and `.claude/`
 - `hooks` for `.pre-commit-config.yaml`, `.gitlint`, and hook scripts
 - `make` for the `Makefile` and the scripts it runs
 
-A few rules keep the history readable. The subject stays at 72 characters or fewer and uses the imperative mood. The subject does not end with a period, and vague subjects like `docs: update` or `fix: cleanup` are best avoided.
+Keep the subject to 72 characters or fewer, write it in the imperative mood, and leave off the trailing period. The `commit-msg` hook described in [Local Checks](#local-checks) rejects vague subjects like `docs: update` or `fix: cleanup`.
 
 For example:
 
@@ -98,33 +95,18 @@ For example:
 docs: add escalation threshold kata
 ```
 
-The optional commit message hook enforces the subject format.
-
 ## Local Checks
 
-A small Makefile covers everything useful to run before opening a pull request.
+Everything worth running before a pull request is in the Makefile, and `make help` lists the targets. `make fix` and `make lint` run their checks through [pre-commit](https://pre-commit.com), so install it first.
 
-After editing kata files, validate the frontmatter contract:
+- `make check` checks that each kata's `number` matches its filename prefix and is unique, that `behavior` is filled in, and that the file has exactly 1 H1 and exactly 1 bold closing principle.
+- `make readme` regenerates the README kata table. Run it after adding, removing, renaming, or retitling a kata, or after changing its `behavior`.
+- `make fix` fixes trailing whitespace and mixed line endings, and regenerates the README kata table.
+- `make lint` checks for merge conflict markers, invalid YAML, Makefile problems with [checkmake](https://github.com/mrtazz/checkmake), and shell script problems with ShellCheck, then runs `make check`.
 
-```sh
-make check
-```
+If you would rather not run these by hand, pre-commit can also run the same checks on every commit. `make hooks-install` sets up 2 hook stages:
 
-After adding, removing, renaming, retitling, or changing the behavior frontmatter of a kata, regenerate the README table:
+- `pre-commit`: checks the branch name, validates the katas when kata files are staged, and runs the fix and lint hooks behind `make fix` and `make lint`.
+- `commit-msg`: checks the commit message with [gitlint](https://jorisroovers.com/gitlint/), configured in `.gitlint`.
 
-```sh
-make readme
-```
-
-These checks can also run automatically through [pre-commit](https://pre-commit.com). Install it, then run:
-
-```sh
-make hooks-install
-```
-
-It sets up two hooks:
-
-- `pre-commit`: checks the branch name, and validates kata frontmatter when kata files are staged
-- `commit-msg`: checks the commit message with [gitlint](https://jorisroovers.com/gitlint/), configured in `.gitlint`
-
-Remove both with `make hooks-uninstall`.
+`make hooks-uninstall` removes them again.
