@@ -69,8 +69,15 @@ h2 {
 }
 
 .site-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 2rem;
   font-weight: 700;
+  line-height: 3.85rem;
+  letter-spacing: -0.04em;
   color: var(--color-primary-text);
+  margin-block: -0.8rem;
 }
 
 .site-nav {
@@ -264,7 +271,8 @@ h2 {
     padding-top: 2.5rem;
   }
 
-  .katas h2 {
+  .katas h2,
+  .site-title {
     font-size: 1.625rem;
   }
 
@@ -287,6 +295,10 @@ h2 {
   .site-header {
     row-gap: 0;
     padding: 1rem 0 0.5rem;
+  }
+
+  .site-title {
+    margin-block: -0.925rem;
   }
 
   .site-nav {
@@ -328,6 +340,10 @@ h2 {
 
   .katas h2 {
     margin-bottom: 1rem;
+  }
+
+  .katas h2,
+  .site-title {
     font-size: 1.5rem;
   }
 
