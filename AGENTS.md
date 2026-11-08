@@ -57,7 +57,7 @@ The default audience is technically literate professionals, unless the user spec
 
 - Lead with the most important point.
 - Use descriptive headings for anything longer than a few paragraphs, never generic labels. Headings and titles use APA title case.
-- Do not use horizontal rules as section separators or decorative formatting. Bold sparingly.
+- Do not use horizontal rules as section separators or decorative formatting. The `---` below the header in `README.md` is the only exception. Bold sparingly.
 - Use bullets only for independent, parallel items, not for explanatory or sequential prose.
 - Use backticks only for identifiers, commands, file paths and literal values.
 - Code fences specify a language. Use plain fences for non-code structured text.
