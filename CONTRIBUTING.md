@@ -86,6 +86,7 @@ The scope is optional. Some common scopes are:
 - `agents` for `AGENTS.md` and `.claude/`
 - `hooks` for `.pre-commit-config.yaml`, `.gitlint`, and hook scripts
 - `make` for the `Makefile` and the scripts it runs
+- `site` for the website in `site/`
 
 Keep the subject to 72 characters or fewer, write it in the imperative mood, and leave off the trailing period. The `commit-msg` hook described in [Local Checks](#local-checks) rejects vague subjects like `docs: update` or `fix: cleanup`.
 
