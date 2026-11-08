@@ -1,3 +1,5 @@
+<p align="center"><img src="site/static/icon-192.png" width="96" alt=""></p>
+
 <h1 align="center">Leadership Micro Katas</h1>
 
 <p align="center">Deliberate practice for the parts of tech leadership that do not announce themselves.</p>
@@ -9,15 +11,13 @@
 
 ---
 
-The promotion does not come with a manual. The first time you have to deliver bad news, push back on a deadline, or sit with someone else's uncertainty, you find out what your defaults are. The defaults you brought from engineering rarely fit the job you have just stepped into.
+The promotion does not come with a manual. The first time you deliver bad news, push back on a deadline, or sit with someone else's uncertainty, you find out what your defaults are, and the ones you brought from engineering rarely fit the new job.
 
 A kata is a small prepared response to a moment that keeps showing up. A ticket lands and your hand moves toward the keyboard. A standup ends with 3 people unclear and nobody saying so. You are about to merge code you would rather not defend out loud.
 
-The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed.
+When the trigger arrives, you give it 10 to 15 minutes, write something down, and carry on with the day. A kata needs no team, coach, or permission, and you do not need to be a tech lead yet to practice one.
 
-Just a habit quietly in place before the role asks for it.
-
-If you want to know why the katas look the way they do, [Rationale](docs/rationale.md) explains the thinking behind the format.
+The katas started as [habits picked up over 20 years](https://yrizos.com/writing/leadership-micro-katas/) of engineering work, and [training the next group of tech leads](https://blog.talentlms.io/posts/the-job-before-the-job/) at [Epignosis](https://www.epignosishq.com/) gave a reason to write them down. The [thinking behind the format](docs/rationale.md) explains why each kata looks the way it does.
 
 ## Katas
 
@@ -37,13 +37,13 @@ If you want to know why the katas look the way they do, [Rationale](docs/rationa
 
 <!-- END KATAS -->
 
-Pick one and stay with it for a week. At the end of the week, take a moment to note:
+Stay with one kata for a week. Keep a short note as you go, with 3 questions:
 
-- Did the moment come up?
-- What did you do?
-- What would you change?
+- Did the moment arise?
+- What did I do?
+- What would I change?
 
-Then move on to another.
+If the moment never came up, that is also worth knowing. Then move on to the next kata.
 
 ## Repository Layout
 
@@ -53,6 +53,7 @@ Then move on to another.
 ├── docs/
 │   └── rationale.md    # Thinking behind the format
 ├── scripts/            # Scripts run by the Makefile and the Git hooks
+├── site/               # The website, built with Hugo
 ├── AGENTS.md           # Rules for AI agents working in this repository
 ├── CONTRIBUTING.md     # How to contribute
 ├── LICENSE
@@ -62,4 +63,6 @@ Then move on to another.
 
 ## Contributing
 
-Contributions are welcome, and [CONTRIBUTING.md](CONTRIBUTING.md) explains how to get involved.
+The best contribution is to pick a kata and try it out.
+
+When practice shows where a kata could be clearer, or a moment the catalog does not cover yet, the [contributing guide](CONTRIBUTING.md) explains how to turn that into a change.
