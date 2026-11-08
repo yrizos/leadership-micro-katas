@@ -25,7 +25,7 @@ fi
 type="${branch%%/*}"
 desc="${branch#*/}"
 
-allowed_types='feature fix hotfix refactor chore docs test release'
+allowed_types='feature feat fix hotfix refactor chore docs test release'
 found=0
 for t in $allowed_types; do
   if [ "$type" = "$t" ]; then
