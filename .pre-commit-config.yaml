@@ -1,3 +1,4 @@
+exclude: ^site/(static/fonts|assets/icons)/
 repos:
   - repo: local
     hooks:
