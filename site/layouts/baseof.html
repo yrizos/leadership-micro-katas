@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ or .Title (index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1) }} | {{ site.Title }}{{ end }}</title>
+  {{- $name := "" }}
+  {{- if not .IsHome }}
+    {{- $name = or .Title (index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1) }}
+    {{- if eq .Type "katas" }}{{ $name = printf "%s: %s" $name .Params.behavior }}{{ end }}
+  {{- end }}
+  <title>{{ if .IsHome }}Short exercises for everyday technical leadership | {{ site.Title }}{{ else }}{{ $name }} | {{ site.Title }}{{ end }}</title>
   <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
   <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
@@ -25,7 +30,7 @@
   {{- $website := dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink }}
   {{- $ld := merge (dict "@context" "https://schema.org") $website }}
   {{- if not .IsHome }}
-    {{- $title := or .Title (index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1) }}
+    {{- $title := $name }}
     {{- if eq .Type "katas" }}
       {{- $ld = dict "@context" "https://schema.org" "@type" "Article" "headline" $title "description" .Params.behavior "author" (dict "@type" "Person" "name" "Yannis Rizos" "url" "https://yrizos.com") "dateModified" .Lastmod "license" "https://creativecommons.org/licenses/by-sa/4.0/" "url" .Permalink "isPartOf" $website }}
     {{- else }}
