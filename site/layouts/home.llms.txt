@@ -1,0 +1,17 @@
+# {{ site.Title }}
+
+> A kata is a small prepared response to a moment that keeps showing up.
+
+## Katas
+
+{{ range (site.GetPage "/katas").Pages.ByParam "number" -}}
+- [{{ index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}]({{ .Permalink }}): {{ .Params.behavior }}
+{{ end }}
+## About
+
+{{ with site.GetPage "/about" }}- [{{ .Title }}]({{ .Permalink }}){{ end }}
+{{ with site.GetPage "/rationale" }}- [{{ .Title }}]({{ .Permalink }}){{ end }}
+
+## Data
+
+{{ with site.Home.OutputFormats.Get "json" }}- [katas.json]({{ .Permalink }}): All katas with their examples{{ end }}

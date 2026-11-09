@@ -8,8 +8,14 @@ enableRobotsTXT = true
 [outputFormats.json]
   baseName = 'katas'
 
+[outputFormats.llms]
+  mediaType = 'text/plain'
+  baseName = 'llms'
+  isPlainText = true
+  notAlternative = true
+
 [outputs]
-  home = ['html', 'rss', 'json']
+  home = ['html', 'rss', 'json', 'llms']
 
 [params]
   github = 'https://github.com/yrizos/leadership-micro-katas'
