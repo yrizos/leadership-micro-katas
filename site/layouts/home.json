@@ -22,6 +22,7 @@
     "url" .Permalink
     "title" (index (findRESubmatch $heading $raw 1) 0 1)
     "behavior" .Params.behavior
+    "date" (.Date.Format "2006-01-02")
     "trigger" (index (findRESubmatch `(?m)^([^-#*\s].*)$` $raw 1) 0 1)
     "steps" $steps
     "principle" (index (findRESubmatch `(?m)^\*\*(.+)\*\*$` $raw 1) 0 1)

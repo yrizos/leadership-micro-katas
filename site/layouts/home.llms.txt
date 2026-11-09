@@ -5,7 +5,7 @@
 ## Katas
 
 {{ range (site.GetPage "/katas").Pages.ByParam "number" -}}
-- [{{ index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}]({{ (.OutputFormats.Get "markdown").Permalink }}): {{ .Params.behavior }}
+- [{{ index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}]({{ (.OutputFormats.Get "markdown").Permalink }}): {{ .Params.behavior }} (published {{ .Date.Format "2006-01-02" }})
 {{ end }}
 ## About
 
