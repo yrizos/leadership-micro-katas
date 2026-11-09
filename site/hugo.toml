@@ -1,6 +1,8 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'Leadership Micro Katas'
+disableKinds = ['taxonomy', 'term']
+enableGitInfo = true
 
 [params]
   github = 'https://github.com/yrizos/leadership-micro-katas'
@@ -20,12 +22,6 @@ title = 'Leadership Micro Katas'
     list = 'local'
   [cascade.target]
     path = '{/katas,/examples,/examples/**}'
-
-[[cascade]]
-  [cascade.build]
-    list = 'local'
-  [cascade.target]
-    path = '/katas/**'
 
 [module]
   [[module.mounts]]
