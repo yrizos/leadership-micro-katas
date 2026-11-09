@@ -1,3 +1,8 @@
+---
+title: Rationale
+layout: page
+---
+
 # Rationale
 
 Software engineers who move into lead roles lose the feedback loops that made them good. Code compiles or it does not. Tests pass or they fail.

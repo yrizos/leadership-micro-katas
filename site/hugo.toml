@@ -21,12 +21,6 @@ title = 'Leadership Micro Katas'
   [cascade.target]
     path = '{/katas,/katas/**}'
 
-[[cascade]]
-  title = 'Rationale'
-  layout = 'rationale'
-  [cascade.target]
-    path = '/rationale'
-
 [module]
   [[module.mounts]]
     source = 'content'

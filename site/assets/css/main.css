@@ -246,127 +246,87 @@ h2 {
   content: " ↗";
 }
 
-.page {
-  padding: 1.875rem 0 1.5rem;
-}
-
-.page h1,
-.page h2 {
-  line-height: 1.2;
-}
-
-.page h1 {
-  margin-bottom: 1.5rem;
-}
-
-.page h2 {
-  margin: 2.5rem 0 1.5rem;
-}
-
-.page > :last-child {
-  margin-bottom: 0;
-}
-
-.page a {
-  text-decoration: underline;
-}
-
-.rationale-intro {
+.page-intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
   gap: 4rem;
   padding: 1.875rem 0 0;
 }
 
-.rationale-intro h1 {
+.page-intro h1 {
   font-size: 3.25rem;
   line-height: 1.08;
 }
 
-.rationale-lead {
+.page-lead {
   padding: 1.5rem;
   background: #F4F4F2;
 }
 
-.rationale-lead p {
+.page-lead p {
   margin: 0 0 1rem;
   color: var(--color-primary-text);
 }
 
-.rationale-lead p:last-child {
+.page-lead p:last-child {
   margin-bottom: 0;
   font-weight: 600;
   color: var(--color-accent);
 }
 
-.rationale-section {
+.page-section {
   display: grid;
   gap: 1.5rem;
   padding: 2.5rem 0 0;
 }
 
-.rationale-section:last-child {
+.page-section:last-child {
   padding-bottom: 1.5rem;
 }
 
-.rationale-section h2 {
+.page-section h2 {
   font-size: 2rem;
   line-height: 1.2;
 }
 
-.rationale-anchor {
+.page-anchor {
   font-weight: 500;
   color: var(--color-accent);
 }
 
 @media (hover: hover) {
-  .rationale-anchor {
+  .page-anchor {
     opacity: 0;
   }
 
-  .rationale-section h2:hover .rationale-anchor,
-  .katas h2:hover .rationale-anchor,
-  .rationale-anchor:focus-visible {
+  .page-section h2:hover .page-anchor,
+  .katas h2:hover .page-anchor,
+  .page-anchor:focus-visible {
     opacity: 1;
   }
 }
 
-.rationale-body p {
+.page-body p {
   margin: 0 0 1rem;
   line-height: 1.6;
 }
 
-.rationale-body p:last-child {
+.page-body p:last-child {
   margin-bottom: 0;
 }
 
-.rationale-body ul {
-  list-style: square;
+.page-body ul {
+  padding-left: 0;
+  list-style: square inside;
 }
 
-.rationale-body li::marker {
+.page-body li::marker {
   color: var(--color-accent);
 }
 
-.rationale-references .rationale-body {
-  padding-left: 2rem;
-  border-left: 2px solid var(--color-accent);
-}
-
-.rationale-references p {
-  padding-left: 1.5rem;
-  text-indent: -1.5rem;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-}
-
-.rationale a {
+.page a {
   text-decoration: underline;
   text-underline-offset: 0.15em;
-}
-
-.page h3 {
-  color: var(--color-primary-text);
 }
 
 @media (max-width: 64rem) {
@@ -404,16 +364,16 @@ h2 {
     margin-top: 0.375rem;
   }
 
-  .rationale-intro h1 {
+  .page-intro h1 {
     font-size: 2.5rem;
   }
 
-  .rationale-section {
+  .page-section {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .rationale-section h2 {
+  .page-section h2 {
     font-size: 1.625rem;
   }
 }
@@ -521,10 +481,6 @@ h2 {
     padding-top: 2.5rem;
   }
 
-  .page {
-    padding: 1.5rem 0 1rem;
-  }
-
   .site-footer {
     margin-top: 0.5rem;
     margin-inline: -1.25rem;
@@ -536,9 +492,7 @@ h2 {
     font-size: 2rem;
   }
 
-  .katas h2,
-  .page h1,
-  .page h2 {
+  .katas h2 {
     margin-bottom: 1rem;
   }
 
@@ -584,42 +538,38 @@ h2 {
     grid-column: 2;
   }
 
-  .rationale-intro,
-  .rationale-section {
+  .page-intro,
+  .page-section {
     gap: 1rem;
     margin-inline: -1.25rem;
     padding-inline: 1.25rem;
   }
 
-  .rationale-intro {
+  .page-intro {
     grid-template-columns: 1fr;
     padding-block: 1.5rem;
     background: #F4F4F2;
   }
 
-  .rationale-lead {
+  .page-lead {
     padding: 0;
     background: none;
   }
 
-  .rationale-lead p {
+  .page-lead p {
     line-height: 1.6;
     color: inherit;
   }
 
-  .rationale-intro h1 {
+  .page-intro h1 {
     font-size: 2rem;
   }
 
-  .rationale-section h2 {
+  .page-section h2 {
     font-size: 1.5rem;
   }
 
-  .rationale-section:last-child {
+  .page-section:last-child {
     padding-bottom: 1rem;
-  }
-
-  .rationale-references .rationale-body {
-    padding-left: 1.25rem;
   }
 }
