@@ -247,6 +247,10 @@ h2 {
   fill: currentColor;
 }
 
+.site-footer a:last-child {
+  margin-left: auto;
+}
+
 .site-footer .external::after {
   content: " ↗";
 }

@@ -8,6 +8,7 @@
   <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
   <meta name="theme-color" content="#FAFAF9">
   {{ with resources.Get "css/main.css" }}
     {{ if hugo.IsProduction }}
@@ -34,6 +35,7 @@
   </main>
   <footer class="site-footer">
     <a class="external" href="{{ site.Params.github }}">{{ partial "icon.html" "github" }}GitHub</a>
+    {{ with site.Home.OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">{{ partial "icon.html" "rss" }}RSS</a>{{ end }}
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">{{ partial "icon.html" "creativecommons" }}CC BY-SA 4.0</a>
   </footer>
 </body>
