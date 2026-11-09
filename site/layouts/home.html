@@ -28,7 +28,7 @@
         <td class="kata-number" role="cell">{{ printf "%03d" .Params.number }}</td>
         <td class="kata-title" role="cell"><a href="{{ .RelPermalink }}">{{ $title }}</a></td>
         <td class="kata-behavior" role="cell">{{ .Params.behavior }}</td>
-        <td class="kata-arrow" role="cell"><a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">↗</a></td>
+        <td class="kata-arrow" role="cell" aria-hidden="true">↗</td>
       </tr>
       {{ end }}
     </tbody>

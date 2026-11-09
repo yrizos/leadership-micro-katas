@@ -70,6 +70,10 @@ a {
     text-decoration: none;
     border-bottom-color: var(--color-accent);
   }
+
+  .katas tbody tr:hover .kata-arrow {
+    color: var(--color-primary-text);
+  }
 }
 
 .skip-link {
@@ -294,6 +298,16 @@ main:has(> .not-found) {
   width: 20rem;
 }
 
+.katas tbody tr {
+  position: relative;
+}
+
+.kata-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
 .katas td {
   padding: 1.125rem 1rem 1.125rem 0;
   border-bottom: 1px solid var(--color-dividers);
@@ -322,12 +336,13 @@ main:has(> .not-found) {
 
 .kata-arrow {
   text-align: right;
+  color: var(--color-dividers);
+  transition: color 0.25s ease;
 }
 
 .katas td.kata-arrow {
   padding-right: 0;
 }
-
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -827,12 +842,6 @@ main:has(> .not-found) {
     row-gap: 0.25rem;
     padding: 1rem 0;
     border-bottom: 1px solid var(--color-dividers);
-  }
-
-  .kata-title a::after {
-    content: "";
-    position: absolute;
-    inset: 0;
   }
 
   .katas td {
