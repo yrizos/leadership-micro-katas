@@ -34,6 +34,13 @@ body {
   line-height: 1.5;
   color: var(--color-secondary-text);
   background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -197,6 +204,42 @@ h2 {
 
 .katas {
   padding-top: 2.3125rem;
+}
+
+main:has(> .not-found) {
+  display: grid;
+  place-items: center;
+}
+
+.not-found {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.not-found-code {
+  margin: 0 0 1.5rem;
+  font-size: clamp(7rem, 22vw, 13rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-primary-text);
+}
+
+.not-found-code img {
+  width: 1.1em;
+  height: 1.1em;
+  margin-inline: -0.06em;
+  vertical-align: -0.19em;
+}
+
+.not-found h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.not-found .intro {
+  max-width: 34rem;
+  margin-inline: auto;
 }
 
 .katas h2,
@@ -390,7 +433,8 @@ h2 {
 .page-lead a,
 .page-body a,
 .kata-card a,
-.kata-story a {
+.kata-story a,
+.not-found .intro a {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -736,6 +780,10 @@ h2 {
   .hero h1 {
     margin-bottom: 1rem;
     font-size: 2rem;
+  }
+
+  .not-found h1 {
+    font-size: 1.5rem;
   }
 
   .katas h2,
