@@ -5,12 +5,12 @@
 ## Katas
 
 {{ range (site.GetPage "/katas").Pages.ByParam "number" -}}
-- [{{ index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}]({{ .Permalink }}): {{ .Params.behavior }}
+- [{{ index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}]({{ (.OutputFormats.Get "markdown").Permalink }}): {{ .Params.behavior }}
 {{ end }}
 ## About
 
-{{ with site.GetPage "/about" }}- [{{ .Title }}]({{ .Permalink }}){{ end }}
-{{ with site.GetPage "/rationale" }}- [{{ .Title }}]({{ .Permalink }}){{ end }}
+{{ with site.GetPage "/about" }}- [{{ .Title }}]({{ (.OutputFormats.Get "markdown").Permalink }}){{ end }}
+{{ with site.GetPage "/rationale" }}- [{{ .Title }}]({{ (.OutputFormats.Get "markdown").Permalink }}){{ end }}
 
 ## Data
 

@@ -14,8 +14,14 @@ enableRobotsTXT = true
   isPlainText = true
   notAlternative = true
 
+[outputFormats.markdown]
+  mediaType = 'text/markdown'
+  isPlainText = true
+  ugly = true
+
 [outputs]
   home = ['html', 'rss', 'json', 'llms']
+  page = ['html', 'markdown']
 
 [params]
   github = 'https://github.com/yrizos/leadership-micro-katas'

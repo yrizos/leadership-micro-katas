@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $parts := split .Content "<h2" }}
 {{ $intro := split (index $parts 0) "</h1>" }}
-<article class="page">
+<article>
   <header class="page-intro">
     {{ printf "%s</h1>" (index $intro 0) | safeHTML }}
     <div class="page-lead">{{ index $intro 1 | safeHTML }}</div>
