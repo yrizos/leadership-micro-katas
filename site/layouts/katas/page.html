@@ -1,0 +1,44 @@
+{{ define "main" }}
+{{- $heading := `(?m)^# (.+)$` }}
+{{- $body := index (split .Content "</h1>") 1 }}
+{{- $trigger := index (findRE `(?s)<p>.*?</p>` $body 1) 0 }}
+{{- $steps := index (findRE `(?s)<ul>.*?</ul>` $body 1) 0 | replaceRE `<(/?)ul>` "<${1}ol>" }}
+{{- $principle := index (findRESubmatch `(?s)<p><strong>(.*?)</strong></p>` $body 1) 0 1 }}
+{{- $prev := "" }}
+{{- $next := "" }}
+{{- $katas := (site.GetPage "/katas").Pages.ByParam "number" }}
+{{- range $katas }}
+  {{- if eq .Params.number (sub $.Params.number 1) }}{{ $prev = . }}{{ end }}
+  {{- if eq .Params.number (add $.Params.number 1) }}{{ $next = . }}{{ end }}
+{{- end }}
+{{- if not $prev }}{{ $prev = index (last 1 $katas) 0 }}{{ end }}
+{{- if not $next }}{{ $next = index $katas 0 }}{{ end }}
+<div class="kata">
+  <article class="kata-main">
+    <div class="kata-pin">
+      <p class="kata-num">{{ printf "%03d" .Params.number }}</p>
+      <h1>{{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</h1>
+      <div class="kata-card">
+        <div class="kata-trigger">{{ $trigger | safeHTML }}</div>
+        <div class="kata-steps">{{ $steps | safeHTML }}</div>
+        <p class="kata-principle">{{ $principle | safeHTML }}</p>
+      </div>
+    </div>
+  </article>
+  {{- with site.GetPage (printf "/examples/%s" .File.ContentBaseName) }}
+  <section class="kata-example" aria-labelledby="example">
+    <p class="eyebrow">Example</p>
+    <h2 id="example">{{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</h2>
+    <div class="kata-story">{{ index (split .Content "</h1>") 1 | replaceRE `<(/?)h2` "<${1}h3" | safeHTML }}</div>
+  </section>
+  {{- end }}
+  <nav class="kata-pager" aria-label="Katas">
+    {{- with $prev }}
+    <a rel="prev" href="{{ .RelPermalink }}" aria-label="Previous kata: {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}">← {{ printf "%03d" .Params.number }}<span class="kata-pager-title"> {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</span></a>
+    {{- end }}
+    {{- with $next }}
+    <a rel="next" href="{{ .RelPermalink }}" aria-label="Next kata: {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}">{{ printf "%03d" .Params.number }}<span class="kata-pager-title"> {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</span> →</a>
+    {{- end }}
+  </nav>
+</div>
+{{ end }}

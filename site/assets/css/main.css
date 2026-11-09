@@ -329,6 +329,162 @@ h2 {
   text-underline-offset: 0.15em;
 }
 
+.kata {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 3rem;
+  padding: 2.5rem 0 1.5rem;
+}
+
+.kata-pin {
+  position: sticky;
+  top: 2.5rem;
+}
+
+.kata-num {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-accent);
+}
+
+.kata-main h1 {
+  font-size: 2.75rem;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.kata-card {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background: #FFFFFF;
+  border-top: 4px solid var(--color-accent);
+}
+
+.kata-trigger p {
+  margin: 0;
+  line-height: 1.4;
+  color: var(--color-primary-text);
+  text-wrap: pretty;
+}
+
+.kata-steps ol {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.kata-steps li {
+  position: relative;
+  padding-left: 2.25rem;
+  counter-increment: step;
+  color: var(--color-primary-text);
+}
+
+.kata-steps li + li {
+  margin-top: 0.875rem;
+}
+
+.kata-steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-accent);
+}
+
+.kata-steps em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.kata-principle {
+  margin: 1.5rem 0 0;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--color-accent);
+  text-wrap: pretty;
+}
+
+.kata-pager {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / -1;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-dividers);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-primary-text);
+}
+
+.kata-pager a[rel="next"] {
+  text-align: right;
+}
+
+.kata-example h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.kata-story {
+  max-width: 40rem;
+  margin-top: 1.5rem;
+}
+
+.kata-story p {
+  margin: 0 0 1rem;
+  line-height: 1.65;
+}
+
+.kata-story > :last-child {
+  margin-bottom: 0;
+}
+
+.kata-story h3 {
+  margin: 2.5rem 0 1rem;
+  font-size: 1.375rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--color-primary-text);
+}
+
+.kata-story blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  color: var(--color-primary-text);
+  background: #FFFFFF;
+  border-left: 3px solid var(--color-accent);
+}
+
+.kata-story blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.kata-story blockquote ol,
+.kata-story blockquote ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.kata-story blockquote li + li {
+  margin-top: 0.5rem;
+}
+
+.kata-story code {
+  padding: 0.25em 0.4em;
+  font-size: 0.85em;
+  color: var(--color-accent);
+  background: #E6F0EC;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 @media (max-width: 64rem) {
   body,
   .intro,
@@ -374,6 +530,14 @@ h2 {
   }
 
   .page-section h2 {
+    font-size: 1.625rem;
+  }
+
+  .kata-main h1 {
+    font-size: 2.25rem;
+  }
+
+  .kata-example h2 {
     font-size: 1.625rem;
   }
 }
@@ -572,5 +736,44 @@ h2 {
 
   .page-section:last-child {
     padding-bottom: 1rem;
+  }
+
+  .kata {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .kata-pin {
+    position: static;
+  }
+
+  .kata-main h1 {
+    font-size: 2rem;
+  }
+
+  .kata-card {
+    padding: 1.25rem;
+  }
+
+  .kata-steps ol,
+  .kata-principle {
+    margin-top: 1.25rem;
+  }
+
+  .kata-pager-title {
+    display: none;
+  }
+
+  .kata-example h2 {
+    font-size: 1.5rem;
+  }
+
+  .kata-story h3 {
+    font-size: 1.25rem;
+  }
+
+  .kata-story blockquote {
+    padding: 0.875rem 1rem;
   }
 }

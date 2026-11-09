@@ -19,7 +19,13 @@ title = 'Leadership Micro Katas'
     render = 'never'
     list = 'local'
   [cascade.target]
-    path = '{/katas,/katas/**}'
+    path = '{/katas,/examples,/examples/**}'
+
+[[cascade]]
+  [cascade.build]
+    list = 'local'
+  [cascade.target]
+    path = '/katas/**'
 
 [module]
   [[module.mounts]]
@@ -28,3 +34,6 @@ title = 'Leadership Micro Katas'
   [[module.mounts]]
     source = '../katas'
     target = 'content/katas'
+  [[module.mounts]]
+    source = '../examples'
+    target = 'content/examples'
