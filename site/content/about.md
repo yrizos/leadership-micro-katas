@@ -1,5 +1,6 @@
 ---
 title: About
+description: Short tech leadership exercises that began as habits from 20 years of engineering work, written down to train the next group of tech leads.
 layout: page
 ---
 

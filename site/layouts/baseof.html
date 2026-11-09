@@ -9,6 +9,10 @@
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{- $description := .Description }}
+  {{- if .IsHome }}{{ $description = "A kata is a small prepared response to a moment that keeps showing up. The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed." }}{{ end }}
+  {{- if eq .Type "katas" }}{{ $description = .Params.behavior }}{{ end }}
+  {{ with $description }}<meta name="description" content="{{ . }}">{{ end }}
   {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
   <meta name="theme-color" content="#FAFAF9">
   {{ with resources.Get "css/main.css" }}

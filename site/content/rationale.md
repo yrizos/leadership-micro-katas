@@ -1,5 +1,6 @@
 ---
 title: Rationale
+description: Engineers who move into lead roles lose the feedback that made them good. Short katas, practiced during real work with fixed steps, put some of it back.
 layout: page
 ---
 
