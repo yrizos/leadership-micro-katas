@@ -530,11 +530,14 @@ main:has(> .not-found) {
   border-top: 1px solid var(--color-dividers);
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-accent);
 }
 
 .kata-pager a[rel="next"] {
   text-align: right;
+}
+
+.kata-pager-num {
+  color: var(--color-accent);
 }
 
 .kata-example h2 {

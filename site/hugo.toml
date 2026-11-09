@@ -27,6 +27,10 @@ enableRobotsTXT = true
   github = 'https://github.com/yrizos/leadership-micro-katas'
 
 [[menus.main]]
+  name = 'Katas'
+  url = '/#katas'
+  weight = 5
+[[menus.main]]
   name = 'About'
   pageRef = '/about'
   weight = 10

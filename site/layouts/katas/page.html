@@ -34,10 +34,11 @@
   {{- end }}
   <nav class="kata-pager" aria-label="Katas">
     {{- with $prev }}
-    <a rel="prev" href="{{ .RelPermalink }}" aria-label="Previous kata: {{ printf "%03d" .Params.number }} {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}">← {{ printf "%03d" .Params.number }}<span class="kata-pager-title"> {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</span></a>
+    <a rel="prev" href="{{ .RelPermalink }}" aria-label="Previous kata: {{ printf "%03d" .Params.number }} {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}">← <span class="kata-pager-num">{{ printf "%03d" .Params.number }}</span><span class="kata-pager-title"> {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</span></a>
     {{- end }}
+    <a href="{{ site.Home.RelPermalink }}#katas">All Katas</a>
     {{- with $next }}
-    <a rel="next" href="{{ .RelPermalink }}" aria-label="Next kata: {{ printf "%03d" .Params.number }} {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}">{{ printf "%03d" .Params.number }}<span class="kata-pager-title"> {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</span> →</a>
+    <a rel="next" href="{{ .RelPermalink }}" aria-label="Next kata: {{ printf "%03d" .Params.number }} {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}"><span class="kata-pager-num">{{ printf "%03d" .Params.number }}</span><span class="kata-pager-title"> {{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</span> →</a>
     {{- end }}
   </nav>
 </div>
