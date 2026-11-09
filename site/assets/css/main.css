@@ -759,6 +759,8 @@ main:has(> .not-found) {
 
   .site-nav .active {
     border-bottom-color: transparent;
+    color: var(--color-accent);
+    box-shadow: inset 3px 0 0 var(--color-accent);
   }
 
   .site-footer a {
