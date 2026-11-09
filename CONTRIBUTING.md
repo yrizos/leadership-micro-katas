@@ -59,6 +59,29 @@ Name the trigger moment.
 
 The filename starts with a 3-digit prefix followed by a lowercase hyphenated title, such as `010-escalation-threshold.md`. The `number` in the frontmatter has to match that prefix, and each kata needs its own number. The `behavior` field names the capability being practiced rather than the topic area. Each file also needs exactly 1 H1 for the title and exactly 1 bold line for the closing principle.
 
+## Writing an Example
+
+Each kata has 1 example in `examples/` with the same filename, such as `examples/001-assumption-inventory.md`. The example tells a short story from ordinary engineering work in which someone meets the kata's trigger. Under `## A Second Look`, it then shows what applying each step of the kata to that story could look like.
+
+All examples share one setting and one cast of named characters. The full conventions for the setting, the cast, and the writing live in `.claude/skills/write-example/SKILL.md`, and reading them alongside the existing examples is the quickest way to write one that fits.
+
+An example file looks like this:
+
+```markdown
+---
+kata: 010-escalation-threshold
+description: One plain-language sentence giving useful context
+---
+
+# A Short Title Naming the Situation
+
+Tell the story.
+
+## A Second Look
+
+Walk through the moments in the story where the kata applies.
+```
+
 ## Branches
 
 Branch names follow [Conventional Branch](https://conventional-branch.github.io/) in the form `<type>/<short-description>`, where the type is one of `feature`, `feat`, `fix`, `hotfix`, `refactor`, `chore`, `docs`, or `test`.

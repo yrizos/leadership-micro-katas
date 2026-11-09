@@ -37,6 +37,8 @@ The katas started as [habits picked up over 20 years](https://yrizos.com/writing
 
 <!-- END KATAS -->
 
+Each kata has an example in [`examples/`](examples/).
+
 Stay with one kata for a week. Keep a short note as you go, with 3 questions:
 
 - Did the moment arise?
@@ -50,6 +52,7 @@ If the moment never came up, that is also worth knowing. Then move on to the nex
 ```text
 .
 ├── katas/              # The catalog
+├── examples/           # 1 example per kata
 ├── docs/
 │   └── rationale.md    # Thinking behind the format
 ├── scripts/            # Scripts run by the Makefile and the Git hooks
