@@ -20,7 +20,7 @@ fix: readme ## Fix trailing whitespace and line endings, and regenerate the READ
 
 lint: ## Run all linters and report problems
 	@status=0; \
-	for h in check-merge-conflict check-yaml checkmake shellcheck; do pre-commit run $$h --all-files || status=1; done; \
+	for h in check-merge-conflict check-yaml checkmake shellcheck actionlint; do pre-commit run $$h --all-files || status=1; done; \
 	$(MAKE) -s check || status=1; \
 	exit $$status
 
