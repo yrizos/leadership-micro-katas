@@ -45,6 +45,17 @@ main {
 
 a {
   color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.skip-link,
+.site-title,
+.site-nav a,
+.site-footer a,
+.page-anchor,
+.katas a,
+.kata-pager a {
   text-decoration: none;
 }
 
@@ -216,6 +227,13 @@ main:has(> .not-found) {
   text-align: center;
 }
 
+.not-found img {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 1.5rem;
+}
+
 .not-found-code {
   margin: 0 0 1.5rem;
   font-size: clamp(7rem, 22vw, 13rem);
@@ -223,13 +241,6 @@ main:has(> .not-found) {
   line-height: 1;
   letter-spacing: -0.04em;
   color: var(--color-primary-text);
-}
-
-.not-found-code img {
-  width: 1.1em;
-  height: 1.1em;
-  margin-inline: -0.06em;
-  vertical-align: -0.19em;
 }
 
 .not-found h1 {
@@ -428,15 +439,6 @@ main:has(> .not-found) {
 
 .page-body li::marker {
   color: var(--color-accent);
-}
-
-.page-lead a,
-.page-body a,
-.kata-card a,
-.kata-story a,
-.not-found .intro a {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
 }
 
 .kata {
