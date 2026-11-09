@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{- $name := "" }}
   {{- $crumb := "" }}
-  {{- if not .IsHome }}
+  {{- if .IsHome }}
+    {{- $name = "Short exercises for everyday technical leadership" }}
+  {{- else }}
     {{- $name = or .Title (index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1) }}
     {{- $crumb = $name }}
     {{- if eq .Type "katas" }}{{ $name = printf "%s: %s" $name .Params.behavior }}{{ end }}
   {{- end }}
-  <title>{{ if .IsHome }}Short exercises for everyday technical leadership | {{ site.Title }}{{ else }}{{ $name }} | {{ site.Title }}{{ end }}</title>
+  <title>{{ $name }} | {{ site.Title }}</title>
   <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
   <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
@@ -21,6 +23,23 @@
   {{- if .IsHome }}{{ $description = "A kata is a small prepared response to a moment that keeps showing up. The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed." }}{{ end }}
   {{- if eq .Type "katas" }}{{ $description = .Params.behavior }}{{ end }}
   {{ with $description }}<meta name="description" content="{{ . }}">{{ end }}
+  {{- if ne .Kind "404" }}
+  <meta property="og:type" content="{{ if eq .Type "katas" }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ $name }}">
+  {{ with $description }}<meta property="og:description" content="{{ . }}">{{ end }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ "icon-512.png" | absURL }}">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="{{ site.Title }} icon">
+  {{- if eq .Type "katas" }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
+  <meta name="twitter:card" content="summary">
+  {{- end }}
   {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
   <meta name="theme-color" content="#FAFAF9">
   {{ with resources.Get "css/main.css" }}
