@@ -4,6 +4,12 @@ title = 'Leadership Micro Katas'
 disableKinds = ['taxonomy', 'term']
 enableGitInfo = true
 
+[outputFormats.json]
+  baseName = 'katas'
+
+[outputs]
+  home = ['html', 'rss', 'json']
+
 [params]
   github = 'https://github.com/yrizos/leadership-micro-katas'
 

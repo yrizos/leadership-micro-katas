@@ -1,0 +1,30 @@
+{{- $heading := `(?m)^# (.+)$` -}}
+{{- $katas := slice -}}
+{{- range (site.GetPage "/katas").Pages.ByParam "number" -}}
+  {{- $raw := .RawContent -}}
+  {{- $steps := slice -}}
+  {{- range findRESubmatch `(?m)^- (.+)$` $raw -}}
+    {{- $steps = $steps | append (index . 1) -}}
+  {{- end -}}
+  {{- $examples := slice -}}
+  {{- with site.GetPage (printf "/examples/%s" .File.ContentBaseName) -}}
+    {{- $parts := split .RawContent "## A Second Look" -}}
+    {{- $examples = $examples | append (dict
+      "title" (index (findRESubmatch $heading .RawContent 1) 0 1)
+      "description" .Params.description
+      "story" (index $parts 0 | replaceRE `(?m)^# .+$` "" | strings.TrimSpace)
+      "second_look" (index $parts 1 | strings.TrimSpace)
+    ) -}}
+  {{- end -}}
+  {{- $katas = $katas | append (dict
+    "number" .Params.number
+    "slug" .File.ContentBaseName
+    "title" (index (findRESubmatch $heading $raw 1) 0 1)
+    "behavior" .Params.behavior
+    "trigger" (index (findRESubmatch `(?m)^([^-#*\s].*)$` $raw 1) 0 1)
+    "steps" $steps
+    "principle" (index (findRESubmatch `(?m)^\*\*(.+)\*\*$` $raw 1) 0 1)
+    "examples" $examples
+  ) -}}
+{{- end -}}
+{{- $katas | jsonify (dict "indent" "  " "noHTMLEscape" true) -}}
