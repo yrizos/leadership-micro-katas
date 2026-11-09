@@ -50,5 +50,8 @@
     {{ with site.Home.OutputFormats.Get "rss" }}<a href="{{ .RelPermalink }}">{{ partial "icon.html" "rss" }}RSS</a>{{ end }}
     <a href="https://creativecommons.org/licenses/by-sa/4.0/">{{ partial "icon.html" "creativecommons" }}CC BY-SA 4.0</a>
   </footer>
+  {{ if hugo.IsProduction }}
+  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "344b3de3edfa492ba17622e542e721f7"}'></script><!-- End Cloudflare Web Analytics -->
+  {{ end }}
 </body>
 </html>
