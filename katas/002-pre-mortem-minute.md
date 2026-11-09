@@ -1,6 +1,7 @@
 ---
 number: 2
 behavior: Anticipate failure before momentum silences doubt
+date: 2026-03-21
 ---
 
 # Pre-Mortem Minute

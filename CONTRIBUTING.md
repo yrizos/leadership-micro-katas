@@ -44,6 +44,7 @@ A kata file looks like this:
 ---
 number: 10
 behavior: Name the observable behavior
+date: 2026-11-09
 ---
 
 # The Kata Title
@@ -57,7 +58,7 @@ Name the trigger moment.
 **State the principle the reader should remember.**
 ```
 
-The filename starts with a 3-digit prefix followed by a lowercase hyphenated title, such as `010-escalation-threshold.md`. The `number` in the frontmatter has to match that prefix, and each kata needs its own number. The `behavior` field names the capability being practiced rather than the topic area. Each file also needs exactly 1 H1 for the title and exactly 1 bold line for the closing principle.
+The filename starts with a 3-digit prefix followed by a lowercase hyphenated title, such as `010-escalation-threshold.md`. The `number` in the frontmatter has to match that prefix, and each kata needs its own number. The `behavior` field names the capability being practiced rather than the topic area. The `date` field is the date the kata is first published, written as `YYYY-MM-DD`. Each file also needs exactly 1 H1 for the title and exactly 1 bold line for the closing principle.
 
 ## Writing an Example
 

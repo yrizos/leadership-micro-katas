@@ -1,6 +1,7 @@
 ---
 number: 4
 behavior: Explain a technical constraint so a non-engineer can act on it
+date: 2026-03-21
 ---
 
 # The Blocker Brief

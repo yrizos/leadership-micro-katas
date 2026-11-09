@@ -1,6 +1,7 @@
 ---
 number: 5
 behavior: Articulate what a decision costs, not just what it gains
+date: 2026-03-21
 ---
 
 # The Tradeoff Statement

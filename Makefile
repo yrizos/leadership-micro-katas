@@ -7,8 +7,8 @@ help:
 
 # Validate the kata frontmatter contract that readme and downstream
 # consumers rely on: number present and matching the filename prefix,
-# behavior present and non-empty, exactly one H1, and one bold
-# closing principle.
+# behavior present and non-empty, first published date present and
+# non-empty, exactly one H1, and one bold closing principle.
 check: ## Validate kata metadata and format
 	@awk -f scripts/check-katas.awk $(KATAS)
 

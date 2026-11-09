@@ -1,6 +1,7 @@
 ---
 number: 7
 behavior: Turn escalation from a stress response into a deliberate decision
+date: 2026-03-21
 ---
 
 # The Line Before the Pressure

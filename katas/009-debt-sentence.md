@@ -1,6 +1,7 @@
 ---
 number: 9
 behavior: Write down what is wrong before you ship it
+date: 2026-03-23
 ---
 
 # The Debt Sentence

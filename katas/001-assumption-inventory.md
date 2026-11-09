@@ -1,6 +1,7 @@
 ---
 number: 1
 behavior: Surface hidden assumptions before they become surprises
+date: 2026-03-21
 ---
 
 # Assumption Inventory

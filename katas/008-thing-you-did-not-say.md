@@ -1,6 +1,7 @@
 ---
 number: 8
 behavior: Say on paper what you would not say out loud
+date: 2026-03-21
 ---
 
 # The Thing You Did Not Say

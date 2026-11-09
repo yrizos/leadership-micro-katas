@@ -1,6 +1,7 @@
 ---
 number: 3
 behavior: Ground feedback in evidence, not preference
+date: 2026-03-21
 ---
 
 # Opinion or Observation

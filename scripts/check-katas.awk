@@ -1,6 +1,7 @@
 # Validates the kata files passed as arguments. Run by `make check`.
 # Each kata needs a frontmatter number that matches its filename prefix,
-# a non-empty behavior, exactly 1 H1 and exactly 1 bold closing principle.
+# a non-empty behavior, a non-empty first published date, exactly 1 H1
+# and exactly 1 bold closing principle.
 # Numbers must be unique across files. Prints a ✓ or ✗ line per file and
 # exits 1 when any file fails.
 BEGIN {
@@ -13,6 +14,7 @@ function finalize() {
   if (!have_num) record("missing number");
   else if (num != expected) record("number " num " does not match filename prefix " expected);
   if (!have_beh || beh == "") record("missing or empty behavior");
+  if (!have_date || date == "") record("missing or empty date");
   if (h1 != 1) record("expected 1 H1, found " h1);
   if (principle != 1) record("expected 1 bold closing principle, found " principle);
   if (have_num) {
@@ -31,11 +33,12 @@ FNR == 1 {
   current = FILENAME;
   fname = FILENAME; sub(/.*\//, "", fname);
   expected = fname + 0;
-  in_fm = 0; fm_done = 0; have_num = 0; have_beh = 0; h1 = 0; principle = 0; num = ""; beh = "";
+  in_fm = 0; fm_done = 0; have_num = 0; have_beh = 0; have_date = 0; h1 = 0; principle = 0; num = ""; beh = ""; date = "";
 }
 /^---$/ && !fm_done { in_fm = !in_fm; if (!in_fm) fm_done = 1; next }
 in_fm && /^number:/ { sub(/^number:[[:space:]]*/, ""); num = $0 + 0; have_num = 1; next }
 in_fm && /^behavior:/ { sub(/^behavior:[[:space:]]*/, ""); beh = $0; have_beh = 1; next }
+in_fm && /^date:/ { sub(/^date:[[:space:]]*/, ""); date = $0; have_date = 1; next }
 /^# / { h1++ }
 /^\*\*.*\*\*$/ { principle++ }
 END { finalize(); exit status }

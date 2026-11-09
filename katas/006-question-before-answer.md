@@ -1,6 +1,7 @@
 ---
 number: 6
 behavior: Develop others by resisting the urge to solve for them
+date: 2026-03-21
 ---
 
 # The Question Before the Answer
