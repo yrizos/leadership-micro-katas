@@ -5,7 +5,7 @@ layout: page
 
 # About
 
-These katas are short exercises for the moments of tech leadership that keep showing up. They started as habits [Yannis Rizos](https://github.com/yrizos) picked up over 20 years of engineering work.
+These katas are short exercises for the moments of tech leadership that keep showing up. They started as habits [Yannis Rizos](https://yrizos.com) picked up over 20 years of engineering work.
 
 Training the next group of tech leads at [Epignosis](https://www.epignosishq.com/) gave a reason to write them down. Each habit became a kata short enough to practice in the middle of a working day.
 

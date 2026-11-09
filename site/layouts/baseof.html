@@ -17,6 +17,17 @@
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{ end }}
   {{ end }}
+  {{- $website := dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink }}
+  {{- $ld := merge (dict "@context" "https://schema.org") $website }}
+  {{- if not .IsHome }}
+    {{- $title := or .Title (index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1) }}
+    {{- if eq .Type "katas" }}
+      {{- $ld = dict "@context" "https://schema.org" "@type" "Article" "headline" $title "description" .Params.behavior "author" (dict "@type" "Person" "name" "Yannis Rizos" "url" "https://yrizos.com") "dateModified" .Lastmod "license" "https://creativecommons.org/licenses/by-sa/4.0/" "url" .Permalink "isPartOf" $website }}
+    {{- else }}
+      {{- $ld = dict "@context" "https://schema.org" "@type" "WebPage" "name" $title "url" .Permalink }}
+    {{- end }}
+  {{- end }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
 </head>
 <body>
   <header class="site-header">
