@@ -433,7 +433,8 @@ h2 {
     right: 0;
     z-index: 1;
     overflow: hidden;
-    background: #F4F4F2;
+    background: var(--color-background);
+    box-shadow: 0 0.75rem 1.5rem rgba(24, 37, 34, 0.1);
     interpolate-size: allow-keywords;
     block-size: auto;
     opacity: 1;
