@@ -10,7 +10,7 @@
   {{ $section := split . "</h2>" }}
   {{ $id := index (findRESubmatch `id="([^"]+)"` (index $section 0) 1) 0 1 }}
   {{ $title := replaceRE `^[^>]*>` "" (index $section 0) }}
-  <section class="page-section{{ if eq $id "further-reading" }} page-references{{ end }}">
+  <section class="page-section">
     <h2 id="{{ $id }}">{{ $title | safeHTML }} <a class="page-anchor" href="#{{ $id }}" aria-label="Link to {{ $title | plainify }}">#</a></h2>
     <div class="page-body">{{ index $section 1 | safeHTML }}</div>
   </section>

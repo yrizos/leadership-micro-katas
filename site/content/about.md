@@ -19,7 +19,7 @@ A few days later, the team went out for drinks, and someone gave me advice I hav
 
 It took a few more incidents and near misses before the advice stuck. I started listing what could go wrong before any change I cared about, and sometimes the list changed the plan. I cannot point to the moment it became a habit.
 
-That list eventually became [a kata](https://github.com/yrizos/leadership-micro-katas/blob/main/katas/002-pre-mortem-minute.md) called the Pre-Mortem Minute. Before you commit to a technical approach, you write "This has failed in production. Why?", list 3 specific reasons, and check whether your plan addresses the most plausible one.
+That list eventually became a kata called the [Pre-Mortem Minute]({{< relref "/katas/002-pre-mortem-minute" >}}). Before you commit to a technical approach, you write "This has failed in production. Why?", list 3 specific reasons, and check whether your plan addresses the most plausible one.
 
 Years later, I [replayed that first incident](https://yrizos.com/writing/leadership-micro-katas/) with the kata in mind. The most plausible risk was a schema migration that ran on deploy with no tested way to reverse it. Running it on its own before the code change would have removed that risk.
 
