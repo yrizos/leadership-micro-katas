@@ -147,10 +147,22 @@ h2 {
 
 .hero {
   display: grid;
+  position: relative;
   grid-template-columns: minmax(0, 65fr) minmax(0, 35fr);
   gap: 4rem;
   padding: 1.875rem 0 2.5rem;
   border-bottom: 1px solid var(--color-dividers);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 4.5rem;
+  height: 3.5rem;
+  transform: translate(-50%, 50%);
+  background: var(--color-background) url("../icon-192.png") center / 3.5rem no-repeat;
 }
 
 .hero h1 {
@@ -201,6 +213,15 @@ h2 {
   border-collapse: collapse;
 }
 
+.katas thead {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .katas th,
 .katas thead td {
   padding: 0 1rem 1rem 0;
@@ -226,8 +247,8 @@ h2 {
   border-bottom: 1px solid var(--color-dividers);
 }
 
-.katas tr:last-child,
-.katas tr:last-child td {
+.katas tbody tr:last-child,
+.katas tbody tr:last-child td {
   border-bottom: 0;
 }
 
