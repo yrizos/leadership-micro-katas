@@ -53,11 +53,11 @@ General principles require judgment at the moment of application, which is exact
 
 ## Further Reading
 
-- Hughes, A.M., Zajac, S., Woods, A.L., and Salas, E. (2020). The role of work environment in training sustainment: a meta-analysis. Human Factors, 62(1).
+- Hughes, A.M., Zajac, S., Woods, A.L., and Salas, E. (2020). [The role of work environment in training sustainment: a meta-analysis](https://doi.org/10.1177/0018720819845988). Human Factors, 62(1).
 - Kua, P. (2015). Talking with Tech Leads.
-- Lacerenza, C.N., Reyes, D.L., Marlow, S.L., Joseph, D.L., and Salas, E. (2017). Leadership training design, delivery, and implementation: a meta-analysis. Journal of Applied Psychology, 102(12).
+- Lacerenza, C.N., Reyes, D.L., Marlow, S.L., Joseph, D.L., and Salas, E. (2017). [Leadership training design, delivery, and implementation: a meta-analysis](https://doi.org/10.1037/apl0000241). Journal of Applied Psychology, 102(12).
 - Neward, T. [Architectural Katas](https://www.architecturalkatas.com).
 - Orosz, G. (2023). The Software Engineer's Guidebook.
 - Rother, M. (2009). Toyota Kata.
 - Thomas, D. (2003). [Code Kata](http://codekata.com).
-- Wallo, A., Lundqvist, D., and Coetzer, A. (2024). Learning-oriented leadership in organizations: an integrative review of qualitative studies. Human Resource Development Review, 23(2).
+- Wallo, A., Lundqvist, D., and Coetzer, A. (2024). [Learning-oriented leadership in organizations: an integrative review of qualitative studies](https://doi.org/10.1177/15344843241239723). Human Resource Development Review, 23(2).
