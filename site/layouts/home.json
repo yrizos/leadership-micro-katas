@@ -19,6 +19,7 @@
   {{- $katas = $katas | append (dict
     "number" .Params.number
     "slug" .File.ContentBaseName
+    "url" .Permalink
     "title" (index (findRESubmatch $heading $raw 1) 0 1)
     "behavior" .Params.behavior
     "trigger" (index (findRESubmatch `(?m)^([^-#*\s].*)$` $raw 1) 0 1)
