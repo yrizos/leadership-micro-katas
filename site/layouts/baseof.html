@@ -13,6 +13,7 @@
   <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  <link rel="preload" href="{{ "fonts/Inter.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
   <link rel="canonical" href="{{ .Permalink }}">
   {{- $description := .Description }}
   {{- if .IsHome }}{{ $description = "A kata is a small prepared response to a moment that keeps showing up. The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day. No workshop, no coach, no permission needed." }}{{ end }}
