@@ -231,7 +231,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 0.25rem;
   padding: 1.5rem 0;
   font-size: 0.8125rem;
@@ -491,6 +491,7 @@ h2 {
   color: var(--color-accent);
   background: var(--color-code);
   border: 1px solid var(--color-accent);
+  border-radius: 0.5em;
   white-space: nowrap;
 }
 
