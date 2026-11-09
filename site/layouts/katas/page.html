@@ -2,7 +2,7 @@
 {{- $heading := `(?m)^# (.+)$` }}
 {{- $body := index (split .Content "</h1>") 1 }}
 {{- $trigger := index (findRE `(?s)<p>.*?</p>` $body 1) 0 }}
-{{- $steps := index (findRE `(?s)<ul>.*?</ul>` $body 1) 0 | replaceRE `<(/?)ul>` "<${1}ol>" }}
+{{- $steps := index (findRE `(?s)<ul>.*?</ul>` $body 1) 0 | replace `<ul>` `<ol role="list">` | replace `</ul>` `</ol>` }}
 {{- $principle := index (findRESubmatch `(?s)<p><strong>(.*?)</strong></p>` $body 1) 0 1 }}
 {{- $prev := "" }}
 {{- $next := "" }}

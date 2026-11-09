@@ -54,6 +54,20 @@ a {
   }
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  color: var(--color-primary-text);
+  background: var(--color-card);
+}
+
 h1,
 h2 {
   margin: 0;
@@ -167,7 +181,8 @@ h2 {
   padding-top: 2.3125rem;
 }
 
-.katas h2 {
+.katas h2,
+.katas h2 + .page-anchor {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   line-height: 1.2;
@@ -178,7 +193,8 @@ h2 {
   border-collapse: collapse;
 }
 
-.katas th {
+.katas th,
+.katas thead td {
   padding: 0 1rem 1rem 0;
   font-size: 0.8125rem;
   font-weight: 600;
@@ -252,7 +268,7 @@ h2 {
 }
 
 .site-footer .external::after {
-  content: " ↗";
+  content: " ↗" / "";
 }
 
 .page-intro {
@@ -293,13 +309,21 @@ h2 {
   padding-bottom: 1.5rem;
 }
 
-.page-section h2 {
+.page-section h2,
+.page-section h2 + .page-anchor {
   font-size: 2rem;
   line-height: 1.2;
 }
 
+.anchored-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
 .page-anchor {
   font-weight: 500;
+  letter-spacing: -0.04em;
   color: var(--color-accent);
 }
 
@@ -308,8 +332,7 @@ h2 {
     opacity: 0;
   }
 
-  .page-section h2:hover .page-anchor,
-  .katas h2:hover .page-anchor,
+  .anchored-heading:hover .page-anchor,
   .page-anchor:focus-visible {
     opacity: 1;
   }
@@ -334,7 +357,9 @@ h2 {
 }
 
 .page-lead a,
-.page-body a {
+.page-body a,
+.kata-card a,
+.kata-story a {
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -518,6 +543,7 @@ h2 {
   }
 
   .katas h2,
+  .katas h2 + .page-anchor,
   .site-title {
     font-size: 1.625rem;
   }
@@ -544,7 +570,8 @@ h2 {
     font-size: 1.25rem;
   }
 
-  .page-section h2 {
+  .page-section h2,
+  .page-section h2 + .page-anchor {
     font-size: 1.625rem;
   }
 
@@ -564,13 +591,13 @@ h2 {
 @media (max-width: 47.5rem) {
   body {
     padding: 0 1.25rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   .eyebrow,
   .katas th,
   .site-footer {
-    font-size: 0.6875rem;
+    font-size: 0.75rem;
   }
 
   .kata-pager {
@@ -677,11 +704,13 @@ h2 {
     font-size: 2rem;
   }
 
-  .katas h2 {
+  .katas h2,
+  .katas h2 + .page-anchor {
     margin-bottom: 1rem;
   }
 
   .katas h2,
+  .katas h2 + .page-anchor,
   .site-title {
     font-size: 1.5rem;
   }
@@ -750,7 +779,8 @@ h2 {
     font-size: 2rem;
   }
 
-  .page-section h2 {
+  .page-section h2,
+  .page-section h2 + .page-anchor {
     font-size: 1.5rem;
   }
 

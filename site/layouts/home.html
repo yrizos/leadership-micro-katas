@@ -8,27 +8,27 @@
     <p class="intro">The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day.</p>
     <p class="intro">No workshop, no coach, no permission needed.</p>
   </div>
-  <aside class="how-to">
-    <h2 class="eyebrow">How to Use Them</h2>
+  <aside class="how-to" aria-labelledby="how-to">
+    <h2 class="eyebrow" id="how-to">How to Use Them</h2>
     <p><strong>Choose a Kata</strong> Pick one that feels relevant right now.</p>
     <p><strong>Practice It</strong> Work through the steps, alone or with your team.</p>
     <p><strong>Reflect and Repeat</strong> Note what you did, what changed, and what you'll try next.</p>
   </aside>
 </section>
 <section class="katas">
-  <h2 id="katas">The Katas <a class="page-anchor" href="#katas" aria-label="Link to The Katas">#</a></h2>
-  <table>
-    <thead>
-      <tr><th>Number</th><th>Kata</th><th>Behavior to Practice</th><th></th></tr>
+  <div class="anchored-heading"><h2 id="katas">The Katas</h2> <a class="page-anchor" href="#katas" aria-label="Link to The Katas">#</a></div>
+  <table role="table">
+    <thead role="rowgroup">
+      <tr role="row"><th role="columnheader">Number</th><th role="columnheader">Kata</th><th role="columnheader">Behavior to Practice</th><td role="cell"></td></tr>
     </thead>
-    <tbody>
+    <tbody role="rowgroup">
       {{ range $katas }}
       {{ $title := index (findRESubmatch `(?m)^# (.+)$` .RawContent 1) 0 1 }}
-      <tr>
-        <td class="kata-number">{{ printf "%03d" .Params.number }}</td>
-        <td class="kata-title"><a href="{{ .RelPermalink }}">{{ $title }}</a></td>
-        <td class="kata-behavior">{{ .Params.behavior }}</td>
-        <td class="kata-arrow"><a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">↗</a></td>
+      <tr role="row">
+        <td class="kata-number" role="cell">{{ printf "%03d" .Params.number }}</td>
+        <td class="kata-title" role="cell"><a href="{{ .RelPermalink }}">{{ $title }}</a></td>
+        <td class="kata-behavior" role="cell">{{ .Params.behavior }}</td>
+        <td class="kata-arrow" role="cell"><a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">↗</a></td>
       </tr>
       {{ end }}
     </tbody>

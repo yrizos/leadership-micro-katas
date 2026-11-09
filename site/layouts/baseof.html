@@ -30,6 +30,7 @@
   <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="site-title" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
     <details class="site-menu">
@@ -41,7 +42,7 @@
       </nav>
     </details>
   </header>
-  <main>
+  <main id="main">
     {{ block "main" . }}{{ end }}
   </main>
   <footer class="site-footer">
