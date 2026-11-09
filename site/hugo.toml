@@ -3,6 +3,7 @@ locale = 'en-us'
 title = 'Leadership Micro Katas'
 disableKinds = ['taxonomy', 'term']
 enableGitInfo = true
+enableRobotsTXT = true
 
 [outputFormats.json]
   baseName = 'katas'
