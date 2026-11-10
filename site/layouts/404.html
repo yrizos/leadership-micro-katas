@@ -1,9 +1,8 @@
 {{ define "main" }}
 <section class="not-found">
   <p class="not-found-code" aria-hidden="true">404</p>
-  <h1>Page Not Found</h1>
+  <h1>Kata Not Found</h1>
   <img src="{{ "icon-192.png" | relURL }}" width="96" height="96" alt="">
-  <p class="intro">This page does not exist, but the 10 minutes you were about to spend on it still do.</p>
-  <p class="intro">Spend them on <a href="{{ site.Home.RelPermalink }}#katas">a kata</a> instead.</p>
+  <p class="intro">Well, that's awkward.<br />Good thing there are <a href="{{ site.Home.RelPermalink }}#katas">{{ len (site.GetPage "/katas").Pages }} other katas</a> to pick from.</p>
 </section>
 {{ end }}

@@ -263,10 +263,6 @@ h2 {
   margin-top: 1rem;
 }
 
-.intro {
-  margin: 1rem 0 0;
-}
-
 .katas {
   padding-top: var(--hero-after);
 }
@@ -277,6 +273,10 @@ main:has(> .not-found) {
 }
 
 .not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   padding: 2.5rem 0;
   text-align: center;
 }
@@ -285,14 +285,13 @@ main:has(> .not-found) {
   display: block;
   width: 6rem;
   height: 6rem;
-  margin: 0 auto 1.5rem;
 }
 
 .not-found-code {
-  margin: 0 0 1.5rem;
+  margin: 0;
   font-size: clamp(7rem, 22vw, 13rem);
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.73;
   letter-spacing: -0.04em;
   color: var(--color-primary-text);
 }
@@ -304,7 +303,7 @@ main:has(> .not-found) {
 
 .not-found .intro {
   max-width: 34rem;
-  margin-inline: auto;
+  margin: 0;
 }
 
 .katas .anchored-heading {
