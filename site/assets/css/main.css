@@ -629,6 +629,10 @@ main:has(> .not-found) {
     font-size: 0.8125rem;
   }
 
+  .kata {
+    padding-bottom: 1.125rem;
+  }
+
   .kata-story h3 {
     font-size: 1.25rem;
   }
@@ -645,6 +649,10 @@ main:has(> .not-found) {
 
   .kata-pager {
     font-size: 0.75rem;
+  }
+
+  .kata {
+    padding-bottom: 1rem;
   }
 
   .site-header {
