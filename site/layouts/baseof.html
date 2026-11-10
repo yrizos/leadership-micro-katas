@@ -14,7 +14,7 @@
   {{- end }}
   <title>{{ $name }} | {{ site.Title }}</title>
   <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
-  <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png">
+  <link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
   <link rel="preload" href="{{ "fonts/Inter.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
@@ -84,7 +84,7 @@
   <footer class="site-footer">
     <a class="external" href="{{ site.Params.github }}">{{ partial "icon.html" "github" }}GitHub</a>
     {{ with site.Home.OutputFormats.Get "json" }}<a href="{{ .RelPermalink }}">{{ partial "icon.html" "json" }}JSON</a>{{ end }}
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/">{{ partial "icon.html" "creativecommons" }}CC BY-SA 4.0</a>
+    <a class="external" rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">{{ partial "icon.html" "creativecommons" }}CC BY-SA 4.0</a>
   </footer>
   {{ if hugo.IsProduction }}
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "344b3de3edfa492ba17622e542e721f7"}'></script><!-- End Cloudflare Web Analytics -->
