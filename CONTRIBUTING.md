@@ -118,14 +118,24 @@ For example:
 docs: add escalation threshold kata
 ```
 
+## Dependencies
+
+The Makefile targets rely on a few tools:
+
+- [pre-commit](https://pre-commit.com) runs the checks behind `make fix`, `make lint`, and the Git hooks.
+- [Hugo](https://gohugo.io) builds the site for `make site` and `make pdf`.
+- [WeasyPrint](https://weasyprint.org) renders the PDF for `make pdf`.
+
 ## Local Checks
 
-Everything worth running before a pull request lives in the Makefile, and `make help` lists the targets. Install [pre-commit](https://pre-commit.com) first, because `make fix` and `make lint` run their checks through it.
+Everything worth running before a pull request lives in the Makefile, and `make help` lists the targets.
 
 - `make check` confirms that each kata's `number` matches its filename prefix and is unique, that `behavior` is filled in, and that the file has exactly 1 H1 and exactly 1 bold closing principle.
 - `make readme` regenerates the README kata table. Run it after adding, removing, renaming, or retitling a kata, or after changing its `behavior`.
 - `make fix` cleans up trailing whitespace and mixed line endings and regenerates the README kata table.
 - `make lint` checks for merge conflict markers, invalid YAML, Makefile problems with [checkmake](https://github.com/mrtazz/checkmake), and shell script problems with ShellCheck, then runs `make check`.
+- `make site` serves the site locally with Hugo, which reloads the page as files change.
+- `make pdf` builds the site with Hugo and renders its print version to `site/public/leadership-micro-katas.pdf` with WeasyPrint.
 
 Running these by hand is optional, because pre-commit can run the same checks on every commit. `make hooks-install` sets up 2 hook stages:
 
