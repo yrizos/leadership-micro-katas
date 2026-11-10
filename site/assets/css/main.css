@@ -771,7 +771,6 @@ main:has(> .not-found) {
     padding-left: 1.25rem;
   }
 
-  .katas thead,
   .kata-arrow {
     display: none;
   }
