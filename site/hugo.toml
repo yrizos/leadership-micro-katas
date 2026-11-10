@@ -14,13 +14,18 @@ enableRobotsTXT = true
   isPlainText = true
   notAlternative = true
 
+[outputFormats.print]
+  mediaType = 'text/html'
+  baseName = 'print'
+  notAlternative = true
+
 [outputFormats.markdown]
   mediaType = 'text/markdown'
   isPlainText = true
   ugly = true
 
 [outputs]
-  home = ['html', 'rss', 'json', 'llms']
+  home = ['html', 'rss', 'json', 'llms', 'print']
   page = ['html', 'markdown']
 
 [params]

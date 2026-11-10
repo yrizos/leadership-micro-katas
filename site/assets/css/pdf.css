@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter.woff2") format("woff2");
+}
+
+/* 11pt text on a 142mm measure gives about 70 characters per line. */
+
+@page {
+  size: A4;
+  margin: 26mm 34mm 24mm;
+
+  @bottom-center {
+    content: counter(page);
+    font: 600 8pt "Inter", sans-serif;
+    color: #182522;
+  }
+}
+
+@page cover {
+  background: #FAF7F0;
+  counter-reset: page 0;
+
+  @bottom-center {
+    content: none;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #46574F;
+}
+
+a {
+  color: inherit;
+  overflow-wrap: break-word;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 0.8em;
+}
+
+ul,
+ol {
+  padding-left: 1.3em;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+strong {
+  color: #182522;
+}
+
+code {
+  font-family: monospace;
+  font-size: 0.88em;
+  color: #006344;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.25;
+  color: #182522;
+  break-after: avoid;
+}
+
+h1 {
+  margin: 0 0 8mm;
+  font-size: 22pt;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 1.6em 0 0.5em;
+  font-size: 14pt;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  margin: 1.6em 0 0.5em;
+  font-size: 12pt;
+}
+
+.eyebrow {
+  margin: 0 0 2mm;
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #006344;
+}
+
+.prose,
+.contents,
+.kata {
+  break-before: page;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 3.5mm 5mm;
+  color: #182522;
+  background: #FAF7F0;
+  border-left: 2px solid #DFD7C8;
+}
+
+blockquote p:last-child,
+blockquote ol:last-child,
+blockquote ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Cover */
+
+.cover {
+  page: cover;
+  position: relative;
+  height: 247mm;
+  overflow: hidden;
+}
+
+.cover-icon {
+  display: block;
+  width: 20mm;
+  height: 20mm;
+  margin: 0 0 14mm -2mm;
+}
+
+.cover h1 {
+  bookmark-label: "Leadership Micro Katas";
+  margin: 0 0 6mm -0.5mm;
+  font-size: 74.5pt;
+  line-height: 0.95;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+}
+
+.cover-lead {
+  margin: 0 0 3mm;
+  font-size: 16pt;
+  line-height: 1.3;
+  color: #182522;
+}
+
+.cover-author {
+  margin: 0;
+  font-size: 16pt;
+  font-weight: 500;
+  color: #006344;
+}
+
+.cover-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cover-bottom .eyebrow {
+  margin-bottom: 5mm;
+}
+
+.cover-steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+
+.cover-steps li {
+  width: 44mm;
+  margin: 0;
+  counter-increment: step;
+}
+
+.cover-steps li::before {
+  display: block;
+  margin-bottom: 1.5mm;
+  content: counter(step, decimal-leading-zero);
+  font-size: 18pt;
+  font-weight: 700;
+  line-height: 1;
+  color: #006344;
+}
+
+.cover-steps strong {
+  display: block;
+  margin-bottom: 0.5mm;
+}
+
+.cover-imprint {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 12mm;
+  font-size: 8.5pt;
+  line-height: 1.6;
+  color: #46574F;
+}
+
+.cover-imprint a {
+  text-decoration: none;
+}
+
+.cover-imprint .url {
+  font-weight: 600;
+  color: #182522;
+}
+
+.cover-imprint p {
+  margin: 0;
+}
+
+.cover-imprint .dot {
+  margin: 0 2mm;
+}
+
+/* Contents */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+  line-height: 1.4;
+}
+
+th,
+td {
+  padding: 2.8mm 3mm 2.8mm 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #DFD7C8;
+}
+
+th {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: #46574F;
+}
+
+td.number {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #006344;
+}
+
+td.title a {
+  display: block;
+  margin-bottom: 1.5mm;
+  font-weight: 600;
+  color: #182522;
+  text-decoration: none;
+}
+
+td.page,
+th:last-child {
+  padding-right: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+td.page a {
+  text-decoration: none;
+}
+
+td.page a::after {
+  content: target-counter(attr(href), page);
+}
+
+/* Kata */
+
+.kata h1 {
+  margin-bottom: 2mm;
+  bookmark-label: attr(data-bookmark);
+}
+
+.kata .behavior {
+  margin: 0 0 7mm;
+  font-size: 12pt;
+  color: #46574F;
+}
+
+.kata-body {
+  margin: 0 0 10mm;
+  padding: 6mm 7mm;
+  color: #182522;
+  background: #E6F0EC;
+  break-inside: avoid;
+}
+
+.kata-body > p:first-child {
+  font-weight: 600;
+}
+
+.kata-body ul {
+  margin-bottom: 1em;
+}
+
+.kata-body li::marker {
+  color: #006344;
+}
+
+.kata-body > p:last-child {
+  margin: 0;
+}
+
+.example h2 {
+  margin-top: 0;
+}
+
+td.number {
+  width: 11mm;
+}
+
+td.page {
+  width: 8mm;
+}

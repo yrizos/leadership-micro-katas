@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.Title }}</title>
+  <meta name="author" content="Yannis Rizos">
+  <meta name="description" content="Short exercises for everyday technical leadership">
+  <meta name="keywords" content="technical leadership, katas, deliberate practice">
+  {{ hugo.Generator }}
+  <meta name="dcterms.created" content="{{ now.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta name="dcterms.modified" content="{{ now.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta name="license" content="CC BY-SA 4.0">
+  <meta name="license-url" content="https://creativecommons.org/licenses/by-sa/4.0/">
+  <meta name="url" content="{{ site.Home.Permalink }}">
+  {{- range slice "llms" "json" }}
+  {{- with site.Home.OutputFormats.Get . }}
+  <link rel="attachment" href="{{ strings.TrimPrefix site.Home.RelPermalink .RelPermalink }}">
+  {{- end }}
+  {{- end }}
+  {{- range (site.GetPage "/katas").Pages.ByParam "number" }}
+  {{- with .OutputFormats.Get "markdown" }}
+  <link rel="attachment" href="{{ strings.TrimPrefix site.Home.RelPermalink .RelPermalink }}">
+  {{- end }}
+  {{- end }}
+  <style>{{ (resources.Get "css/pdf.css").Content | safeCSS }}</style>
+</head>
+<body>
+{{- $heading := `(?m)^# (.+)$` }}
+{{- $rel := printf `href="%s` site.Home.RelPermalink }}
+{{- $abs := printf `href="%s` site.Home.Permalink }}
+{{- $katas := (site.GetPage "/katas").Pages.ByParam "number" }}
+<section class="cover">
+  <img class="cover-icon" src="icon-original.png" alt="Sprout icon">
+  <p class="eyebrow">Deliberate Practice for Technical Leaders</p>
+  <h1>Leadership<br>Micro Katas</h1>
+  <p class="cover-lead">Short exercises for everyday technical leadership</p>
+  <p class="cover-author">Yannis Rizos</p>
+  <div class="cover-bottom">
+    <p class="eyebrow">How to Use Them</p>
+    <ol class="cover-steps">
+      <li><strong>Choose a Kata</strong> Pick one behavior to practice for a week.</li>
+      <li><strong>Practice It</strong> Follow the steps whenever the triggering situation arises.</li>
+      <li><strong>Reflect and Repeat</strong> Note what happened, what you did, and what you would change.</li>
+    </ol>
+    <div class="cover-imprint">
+      <p class="url"><a href="{{ site.Home.Permalink }}">{{ site.Home.Permalink | strings.TrimPrefix "https://" | strings.TrimSuffix "/" }}</a></p>
+      <p>{{ now.Format "January 2, 2006" }}<span class="dot">•</span><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+    </div>
+  </div>
+</section>
+{{- with site.GetPage "/introduction" }}
+<section class="prose">{{ replace .Content $rel $abs | safeHTML }}</section>
+{{- end }}
+<section class="contents">
+  <h1 id="katas">The Katas</h1>
+  <table>
+    <thead><tr><th>Number</th><th>Kata</th><th>Page</th></tr></thead>
+    <tbody>
+      {{- range $katas }}
+      {{- $id := printf "kata-%03d" .Params.number }}
+      <tr>
+        <td class="number">{{ printf "%03d" .Params.number }}</td>
+        <td class="title"><a href="#{{ $id }}">{{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</a>{{ .Params.behavior }}</td>
+        <td class="page"><a href="#{{ $id }}"></a></td>
+      </tr>
+      {{- end }}
+    </tbody>
+  </table>
+</section>
+{{- range $katas }}
+{{- $number := printf "%03d" .Params.number }}
+{{- $title := index (findRESubmatch $heading .RawContent 1) 0 1 }}
+<article class="kata" id="kata-{{ $number }}">
+  <p class="eyebrow">Kata {{ $number }}</p>
+  <h1 data-bookmark="{{ $number }} {{ $title }}">{{ $title }}</h1>
+  <p class="behavior">{{ .Params.behavior }}</p>
+  <div class="kata-body">{{ index (split .Content "</h1>") 1 | safeHTML }}</div>
+  {{- with site.GetPage (printf "/examples/%s" .File.ContentBaseName) }}
+  <section class="example">
+    <p class="eyebrow">Example</p>
+    <h2>{{ index (findRESubmatch $heading .RawContent 1) 0 1 }}</h2>
+    {{ replace (index (split .Content "</h1>") 1) $rel $abs | replaceRE `<(/?)h2` "<${1}h3" | replaceRE ` id="[^"]*"` "" | safeHTML }}
+  </section>
+  {{- end }}
+</article>
+{{- end }}
+{{- with site.GetPage "/rationale" }}
+<section class="prose">{{ replace .Content $rel $abs | safeHTML }}</section>
+{{- end }}
+</body>
+</html>

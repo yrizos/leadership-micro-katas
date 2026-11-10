@@ -87,6 +87,7 @@
   <footer class="site-footer">
     <a class="external" href="{{ site.Params.github }}">{{ partial "icon.html" "github" }}GitHub</a>
     {{ with site.Home.OutputFormats.Get "json" }}<a href="{{ .RelPermalink }}">{{ partial "icon.html" "json" }}JSON</a>{{ end }}
+    <a href="{{ "leadership-micro-katas.pdf" | relURL }}">{{ partial "icon.html" "file" }}PDF</a>
     <a class="external" rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">{{ partial "icon.html" "creativecommons" }}CC BY-SA 4.0</a>
   </footer>
   {{- end }}

@@ -1,4 +1,4 @@
-.PHONY: help check fix lint readme site hooks-install hooks-uninstall
+.PHONY: help check fix lint readme site pdf hooks-install hooks-uninstall
 
 KATAS := katas/[0-9][0-9][0-9]-*.md
 
@@ -33,6 +33,14 @@ readme: ## Regenerate the README kata table
 
 site: ## Run the Hugo site locally
 	hugo server --source site
+
+# Build the site, render the print page to a PDF next to it, and drop
+# the print page so it is not published. Pass BASE_URL to override
+# the baseURL in site/hugo.toml.
+pdf: ## Build the site and its PDF
+	hugo --source site --minify $(if $(BASE_URL),--baseURL "$(BASE_URL)")
+	weasyprint --pdf-variant pdf/a-3a --custom-metadata site/public/print.html site/public/leadership-micro-katas.pdf
+	rm site/public/print.html
 
 # Install/remove the hooks defined in .pre-commit-config.yaml via
 # pre-commit (https://pre-commit.com).
