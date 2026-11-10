@@ -607,6 +607,10 @@ main:has(> .not-found) {
     font-size: 1rem;
   }
 
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
   .hero-title {
     font-size: 1.6875rem;
   }
