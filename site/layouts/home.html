@@ -1,20 +1,16 @@
 {{ define "main" }}
 {{ $katas := sort (site.GetPage "/katas").Pages "Params.number" }}
-<section class="hero">
-  <div>
-    <p class="eyebrow">Deliberate Practice for Technical Leaders</p>
-    <h1>Short exercises for everyday technical leadership</h1>
-    <p class="intro">A kata is a small prepared response to a moment that keeps showing up.</p>
-    <p class="intro">The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day.</p>
-    <p class="intro">No workshop, no coach, no permission needed.</p>
-  </div>
-  <aside class="how-to" aria-labelledby="how-to">
-    <h2 class="eyebrow" id="how-to">How to Use Them</h2>
-    <p><strong>Choose a Kata</strong> Pick one behavior to practice for a week.</p>
-    <p><strong>Practice It</strong> Follow the steps whenever the triggering situation arises.</p>
-    <p><strong>Reflect and Repeat</strong> Note what happened, what you did, and what you would change.</p>
-  </aside>
-</section>
+{{ partial "hero.html" (dict
+  "label" "Deliberate Practice for Technical Leaders"
+  "heading" "Short exercises for everyday technical leadership"
+  "intro" `<p>A kata is a small prepared response to a moment that keeps showing up.</p>
+<p>The trigger arrives, you give it 10 to 15 minutes, you write something down, and you carry on with the day.</p>
+<p>No workshop, no coach, no permission needed.</p>`
+  "panel" `<h2 class="hero-label">How to Use Them</h2>
+<p><strong>Choose a Kata</strong> Pick one behavior to practice for a week.</p>
+<p><strong>Practice It</strong> Follow the steps whenever the triggering situation arises.</p>
+<p><strong>Reflect and Repeat</strong> Note what happened, what you did, and what you would change.</p>`
+) }}
 <section class="katas">
   <div class="anchored-heading"><h2 id="katas">The Katas</h2> <a class="page-anchor" href="#katas" aria-label="Link to The Katas">#</a></div>
   <table role="table">

@@ -10,7 +10,8 @@ These katas are short exercises for the moments of tech leadership that keep sho
 
 Training the next group of tech leads at [Epignosis](https://www.epignosishq.com/) gave a reason to write them down. Each habit became a kata short enough to practice in the middle of a working day.
 
-20 years of habits, written down for the next lead.
+20 years of habits,\
+written down for the next lead
 
 ## A Habit That Took Years
 

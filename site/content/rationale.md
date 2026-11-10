@@ -10,7 +10,7 @@ Software engineers who move into lead roles lose the feedback loops that made th
 
 Whether you just answered a question someone needed to work through themselves produces no signal of any kind. Neither does staying silent about a risk nobody else has named.
 
-Without something to correct against, the defaults win.
+Without something to correct against, the defaults win
 
 ## Why Katas
 

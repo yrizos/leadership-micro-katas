@@ -1,0 +1,12 @@
+<header class="hero">
+  <div class="hero-main">
+    <p class="hero-label">{{ .label }}</p>
+    <h1 class="hero-title">{{ .heading | safeHTML }}</h1>
+    {{- with .intro }}
+    <div class="hero-intro">{{ . | safeHTML }}</div>
+    {{- end }}
+  </div>
+  {{- with .panel }}
+  <div class="hero-panel">{{ . | safeHTML }}</div>
+  {{- end }}
+</header>

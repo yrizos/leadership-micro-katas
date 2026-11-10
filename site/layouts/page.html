@@ -2,10 +2,10 @@
 {{ $parts := split .Content "<h2" }}
 {{ $intro := split (index $parts 0) "</h1>" }}
 <article>
-  <header class="page-intro">
-    {{ printf "%s</h1>" (index $intro 0) | safeHTML }}
-    <div class="page-lead">{{ index $intro 1 | safeHTML }}</div>
-  </header>
+  {{- $paras := findRE `(?s)<p>.*?</p>` (index $intro 1) }}
+  {{- $heading := index (last 1 $paras) 0 | replaceRE `</?p>` "" }}
+  {{- $panel := delimit (first (sub (len $paras) 1) $paras) "\n" }}
+  {{ partial "hero.html" (dict "label" .Title "heading" $heading "panel" $panel) }}
   {{ range after 1 $parts }}
   {{ $section := split . "</h2>" }}
   {{ $id := index (findRESubmatch `id="([^"]+)"` (index $section 0) 1) 0 1 }}
