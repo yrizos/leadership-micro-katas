@@ -41,7 +41,7 @@
   <meta name="twitter:card" content="summary">
   {{- end }}
   {{ with site.Home.OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">{{ end }}
-  <meta name="theme-color" content="#FAFAF9">
+  <meta name="theme-color" content="#FAF7F0">
   {{ with resources.Get "css/main.css" }}
     {{ if hugo.IsProduction }}
       {{ with . | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">{{ end }}

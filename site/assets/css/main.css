@@ -6,7 +6,6 @@
   --color-dividers: #DFD7C8;
   --title-size: 1.65rem;
   --hero-after: 2.3125rem;
-  --color-panel: #F4F4F2;
   --color-card: #FFFFFF;
   --color-code: #E6F0EC;
 }
@@ -698,7 +697,7 @@ main:has(> .not-found) {
     z-index: 1;
     overflow: hidden;
     background: var(--color-background);
-    box-shadow: 0 0.75rem 1.5rem rgba(24, 37, 34, 0.1);
+    box-shadow: 0 0.75rem 1.5rem color-mix(in srgb, var(--color-primary-text) 10%, transparent);
     interpolate-size: allow-keywords;
     block-size: auto;
     opacity: 1;
