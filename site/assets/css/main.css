@@ -725,7 +725,7 @@ main:has(> .not-found) {
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.25rem;
     margin-inline: -1.25rem;
     padding: 1.25rem;
     min-height: 0;
@@ -758,7 +758,10 @@ main:has(> .not-found) {
   }
 
   .hero-panel {
-    padding-left: 1.25rem;
+    padding-left: 0;
+    padding-top: 1.25rem;
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
   }
 
   .kata-arrow {
