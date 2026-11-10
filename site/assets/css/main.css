@@ -4,7 +4,7 @@
   --color-secondary-text: #46574F;
   --color-accent: #006344;
   --color-dividers: #DFD7C8;
-  --title-size: 1.65rem;
+  --title-size: 1.625rem;
   --hero-after: 2.3125rem;
   --color-card: #FFFFFF;
   --color-code: #E6F0EC;
@@ -124,6 +124,10 @@ h2 {
   color: var(--color-primary-text);
 }
 
+h1 {
+  font-size: 2.375rem;
+}
+
 h2 {
   font-size: var(--title-size);
   line-height: 1.2;
@@ -154,11 +158,12 @@ h2 {
   letter-spacing: -0.025em;
   color: var(--color-primary-text);
   margin-block: -0.8rem;
+  margin-inline-start: -0.75em;
 }
 
 .site-title img {
-  width: 3.15rem;
-  height: 3.15rem;
+  width: calc(3.15em / 1.625);
+  height: calc(3.15em / 1.625);
 }
 
 .site-menu {
@@ -194,7 +199,7 @@ h2 {
 .eyebrow,
 .hero-label {
   margin: 0 0 1rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.08em;
@@ -215,7 +220,6 @@ h2 {
 }
 
 .hero-title {
-  font-size: 2.375rem;
   line-height: 1.08;
   text-wrap: balance;
 }
@@ -289,7 +293,7 @@ main:has(> .not-found) {
 
 .not-found-code {
   margin: 0;
-  font-size: clamp(7rem, 22vw, 13rem);
+  font-size: 13rem;
   font-weight: 700;
   line-height: 0.73;
   letter-spacing: -0.04em;
@@ -297,7 +301,6 @@ main:has(> .not-found) {
 }
 
 .not-found h1 {
-  font-size: 2rem;
   line-height: 1.2;
 }
 
@@ -365,10 +368,6 @@ main:has(> .not-found) {
   color: var(--color-primary-text);
 }
 
-.kata-behavior {
-  font-size: 0.9375rem;
-}
-
 .kata-arrow {
   text-align: right;
   color: var(--color-dividers);
@@ -386,7 +385,7 @@ main:has(> .not-found) {
   gap: 1rem;
   margin-top: 0.25rem;
   padding: 1.5rem 0;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--color-primary-text);
   border-top: 1px solid var(--color-dividers);
 }
@@ -526,7 +525,6 @@ main:has(> .not-found) {
   gap: 1rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-dividers);
-  font-size: 0.875rem;
   font-weight: 500;
 }
 
@@ -553,7 +551,6 @@ main:has(> .not-found) {
 
 .kata-story h3 {
   margin: 2.5rem 0 1rem;
-  font-size: 1.375rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
   color: var(--color-primary-text);
@@ -583,7 +580,7 @@ main:has(> .not-found) {
 
 .kata-story code {
   padding: 0.25em 0.4em;
-  font-size: 0.85em;
+  font-size: 0.875rem;
   color: var(--color-accent);
   background: var(--color-code);
   border: 1px solid var(--color-accent);
@@ -611,8 +608,12 @@ main:has(> .not-found) {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
-  .hero-title {
+  h1 {
     font-size: 1.6875rem;
+  }
+
+  .site-title {
+    margin-inline-start: -1.25rem;
   }
 
   .site-footer {
@@ -621,20 +622,17 @@ main:has(> .not-found) {
 
   .eyebrow,
   .hero-label,
-  .site-footer {
-    font-size: 0.75rem;
+  .site-footer,
+  .kata-story code {
+    font-size: 0.8125rem;
   }
 
-  .kata-pager {
-    font-size: 0.8125rem;
+  .not-found-code {
+    font-size: 8rem;
   }
 
   .kata {
     padding-bottom: 1.125rem;
-  }
-
-  .kata-story h3 {
-    font-size: 1.25rem;
   }
 }
 
@@ -645,9 +643,13 @@ main:has(> .not-found) {
 
   body {
     padding: 0 1.25rem;
+    font-size: 0.9375rem;
   }
 
-  .kata-pager {
+  .eyebrow,
+  .hero-label,
+  .site-footer,
+  .kata-story code {
     font-size: 0.75rem;
   }
 
@@ -666,6 +668,7 @@ main:has(> .not-found) {
 
   .site-title {
     margin-block: -0.925rem;
+    margin-inline-start: -0.875rem;
   }
 
   .site-menu summary {
@@ -753,7 +756,7 @@ main:has(> .not-found) {
     padding: 0.75rem 1.25rem;
   }
 
-  .hero-title {
+  h1 {
     font-size: 1.4375rem;
   }
 
@@ -762,7 +765,11 @@ main:has(> .not-found) {
   }
 
   .not-found h1 {
-    font-size: 1.5rem;
+    font-size: 1.6875rem;
+  }
+
+  .not-found .intro {
+    font-size: 1rem;
   }
 
   .katas .anchored-heading {
@@ -817,10 +824,6 @@ main:has(> .not-found) {
 
   .kata-pager-title {
     display: none;
-  }
-
-  .kata-story h3 {
-    font-size: 1.125rem;
   }
 
   .kata-story blockquote {
